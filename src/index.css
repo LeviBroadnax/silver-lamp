@@ -1,0 +1,38 @@
+body {
+  margin: 0;
+  font-family: consolas, -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
+    "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  user-select: none;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+.Content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #ecf5f4;
+  width: 80vw;
+}
+
+.hardlyinteresting {
+  color: rgba(0, 0, 0, 0.25);
+  fill: rgba(0, 0, 0, 0.25);
+}
+
+.semiinteresting {
+  color: rgba(0, 0, 0, 0.5);
+  fill: rgba(0, 0, 0, 0.5);
+}
+
+.slightlyinteresting {
+  color: rgba(0, 0, 0, 0.75);
+  fill: rgba(0, 0, 0, 0.75);
+}

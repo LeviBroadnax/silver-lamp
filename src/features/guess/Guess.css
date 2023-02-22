@@ -1,0 +1,27 @@
+input {
+  z-index: 5;
+  position: absolute;
+  color: aliceblue;
+  font: 60px consolas, sans-serif;
+  outline: none;
+  top: 30vh;
+}
+
+.visible {
+  background-color: rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(204, 204, 204, 0);
+}
+
+.hidden {
+  background-color: rgba(0, 0, 0, 0);
+  border: 1px solid rgba(204, 204, 204, 0);
+}
+
+.svgShapeShiftKey {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}

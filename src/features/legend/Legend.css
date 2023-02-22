@@ -1,0 +1,15 @@
+.legend {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  padding: 0px 10px 10px 0px;
+  box-sizing: border-box;
+  overflow-y: auto;
+}
+
+.legend-item {
+  display: flex;
+  align-items: self-end;
+  justify-content: space-between;
+  margin-right: 10px;
+}

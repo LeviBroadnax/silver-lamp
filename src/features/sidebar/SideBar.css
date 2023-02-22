@@ -1,0 +1,25 @@
+.SideBar {
+  display: flex;
+  flex-direction: column;
+  align-items: baseline;
+  justify-content: center;
+  float: left;
+  width: 20vw;
+  max-height: calc(100vh-4rem);
+  /* overflow-y: none; */
+  position: sticky;
+  background-color: rgba(51, 107, 145, 0.15);
+  color: #282c34;
+}
+
+.SideBarWord {
+  flex-direction: start;
+  align-self: center;
+  font-size: calc(10px + 2vmin);
+  margin: 2rem;
+  overflow-y: none;
+}
+
+.SideBarWord:first-child {
+  margin-top: 4rem;
+}

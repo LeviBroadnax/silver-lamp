@@ -1,0 +1,11 @@
+.Example {
+  position: absolute;
+  color: #111827;
+  font-size: calc(6px + 2vmin);
+  font-family: system-ui;
+  top: 5vh;
+}
+
+span.Highlight {
+  color: #f87171;
+}

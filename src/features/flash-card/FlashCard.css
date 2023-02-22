@@ -1,0 +1,82 @@
+.FlashCard {
+  display: flex;
+  color: #282c34;
+  width: 50vw;
+  height: 50vh;
+  position: absolute;
+  border-radius: 15%;
+  transition: transform 0.438s ease-in;
+}
+
+.Front {
+  border-top-right-radius: 0%;
+  border-bottom-left-radius: 0%;
+  background-color: aliceblue;
+  visibility: visible;
+  backface-visibility: hidden;
+  background: linear-gradient(
+    to bottom,
+    #002654 0%,
+    #002654 33%,
+    #ed2939 33%,
+    #ed2939 66%,
+    #ffffff 66%,
+    #ffffff 100%
+  );
+}
+
+.Back {
+  border-top-left-radius: 0%;
+  border-bottom-right-radius: 0%;
+  transform: rotateY(180deg);
+  backface-visibility: hidden;
+  background: linear-gradient(
+    to bottom,
+    #b31942 0%,
+    #b31942 14.28%,
+    #ffffff 14.28%,
+    #ffffff 28.56%,
+    #b31942 28.56%,
+    #b31942 42.84%,
+    #ffffff 42.84%,
+    #ffffff 57.12%,
+    #b31942 57.12%,
+    #b31942 71.4%,
+    #ffffff 71.4%,
+    #ffffff 85.68%,
+    #b31942 85.68%,
+    #b31942 100%
+  );
+}
+
+.FlashRank {
+  flex-direction: column;
+  align-self: flex-end;
+  justify-self: center;
+  font-size: calc(8px + 2vmin);
+}
+
+.FlashWord {
+  flex-direction: row;
+  align-self: center;
+  font-size: calc(64px + 2vmin);
+  margin: auto;
+  user-select: none;
+}
+
+.LeftButton {
+  left: 40vw;
+  background-color: #e90404;
+}
+
+.RightButton {
+  right: 20vw;
+  background-color: #111827;
+}
+.FlashCategory {
+  font-size: calc(8px + 2vmin);
+  margin-top: 9vh;
+  margin-left: 80vh;
+  user-select: none;
+  position: absolute;
+}
