@@ -7,6 +7,7 @@ import Example from "../example/Example";
 import Front from "./FlashCardFront";
 import Guess from "../guess/Guess";
 import Stats from "../stats/Stats";
+import { playDang } from "../celebration/audio";
 import { queryStore } from "../../store/FrenchQuery";
 
 const onMouseEnter = () => {
@@ -37,6 +38,7 @@ export default function FlashCards(props) {
     e.preventDefault();
     add(idx);
     nextWord();
+    playDang();
   };
 
   return (

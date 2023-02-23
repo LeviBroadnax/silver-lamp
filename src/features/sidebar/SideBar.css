@@ -5,8 +5,8 @@
   justify-content: center;
   float: left;
   width: 20vw;
-  max-height: calc(100vh-4rem);
-  /* overflow-y: none; */
+  max-height: 100vh;
+  overflow-y: none;
   position: sticky;
   background-color: rgba(51, 107, 145, 0.15);
   color: #282c34;
