@@ -1,6 +1,7 @@
 import "./Example.css";
 
 import React from "react";
+import { distance } from "../../store/jaroWinkler";
 import { queryStore } from "../../store/FrenchQuery";
 
 const getTitleText = (idx) => queryStore.byId(idx).exEnglish;
@@ -20,9 +21,28 @@ const getTextSections = (idx) => {
   let text = res.exFrench;
   if (text === undefined) return getText(idx);
   let wordIdx = text.indexOf(res.french);
-  let first = text.substring(0, wordIdx) + " ";
-  let second = text.substring(wordIdx + res.french.length) + " ";
-  return [first, " " + res.french + " ", second];
+  let highlightedWord = res.french;
+  if (wordIdx === -1) {
+    let highestScore = 0,
+      highestElement = "";
+    for (let e of text.split(" ")) {
+      let score = distance(e, res.french);
+      if (score > highestScore) {
+        highestScore = score;
+        highestElement = e;
+      }
+    }
+    highlightedWord = highestElement;
+    wordIdx = text.indexOf(highestElement);
+  }
+  let third = text.substring(wordIdx + highlightedWord.length);
+  let first = text.substring(0, wordIdx);
+  let second = highlightedWord.trim();
+  if (third.startsWith("s ")) {
+    second = second + "s ";
+    third = third.substring(2);
+  }
+  return [first, second, third];
 };
 
 export default function Example(props) {

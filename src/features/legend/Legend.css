@@ -3,8 +3,9 @@
   bottom: 0;
   right: 0;
   padding: 0px 10px 10px 0px;
-  box-sizing: border-box;
+  box-sizing: unset;
   overflow-y: auto;
+  margin: 1rem;
 }
 
 .legend-item {
@@ -12,4 +13,10 @@
   align-items: self-end;
   justify-content: space-between;
   margin-right: 10px;
+}
+
+@media (max-width: 600px) {
+  .legend {
+    visibility: hidden;
+  }
 }

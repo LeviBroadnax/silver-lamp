@@ -13,6 +13,7 @@ function App() {
       <FlashCard store={useStore} />
       <Legend />
       <audio
+        id='song'
         autoPlay={false}
         src='/Aux_Champs_Elysees.mp3'
         loop={true}

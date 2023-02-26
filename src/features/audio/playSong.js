@@ -1,11 +1,11 @@
 let secondsLeft = 0;
 let interval;
-export const playSong = (scale) => {
-  const audio = document.querySelector("audio");
-  secondsLeft = Math.max(0, secondsLeft);
 
+export const playSong = (scale) => {
+  const audio = document.querySelector("audio#song");
+  secondsLeft = Math.max(0, secondsLeft);
   if (!audio) return "panic";
-  audio.volume = 0.1;
+  audio.volume = 0.05;
   if (audio) {
     audio.play();
     secondsLeft += scale * 1000;
@@ -21,22 +21,4 @@ export const playSong = (scale) => {
       }
     }, 1000);
   }
-};
-export const playDing = () => {
-  const random = Math.random();
-  if (random > 0.7) {
-    var audio = new Audio("ding.mp3");
-  } else {
-    var audio = new Audio("dash.mp3");
-  }
-  audio.loop = false;
-  audio.volume = 0.2;
-  audio.play();
-};
-
-export const playDang = () => {
-  const audio = new Audio("dang.mp3");
-  audio.loop = false;
-  audio.volume = 0.3;
-  audio.play();
 };

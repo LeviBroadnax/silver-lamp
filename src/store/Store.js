@@ -8,6 +8,7 @@ const useStore = create(
     (set, get) => ({
       _words: { next: null },
       _seen: new Set(),
+
       take: (idx) => {
         const words = [];
         let word = get()._words;

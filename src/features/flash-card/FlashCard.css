@@ -2,7 +2,9 @@
   display: flex;
   color: #282c34;
   width: 50vw;
+  width: 50svw;
   height: 50vh;
+  height: 50svh;
   position: absolute;
   border-radius: 15%;
   transition: transform 0.438s ease-in;
@@ -50,33 +52,47 @@
 }
 
 .FlashRank {
+  position: relative;
   flex-direction: column;
   align-self: flex-end;
-  justify-self: center;
+  justify-self: flex-end;
   font-size: calc(8px + 2vmin);
 }
 
 .FlashWord {
   flex-direction: row;
   align-self: center;
-  font-size: calc(64px + 2vmin);
+  font-size: clamp(4rem, 5vw + 1rem, 6rem);
   margin: auto;
+  text-align: center;
   user-select: none;
+  position: relative;
 }
 
-.LeftButton {
-  left: 40vw;
-  background-color: #e90404;
-}
-
-.RightButton {
-  right: 20vw;
-  background-color: #111827;
-}
 .FlashCategory {
   font-size: calc(8px + 2vmin);
-  margin-top: 9vh;
-  margin-left: 80vh;
+  margin-top: 10vh;
+  margin-top: 10svh;
   user-select: none;
+  margin: 2rem;
   position: absolute;
+}
+
+@media (max-width: 600px) {
+  .FlashCard {
+    width: 90vw;
+    width: 90svw;
+    height: 75vh;
+    height: 75svh;
+    max-height: 100svh;
+    overflow: hidden;
+  }
+  .FlashWord {
+    font-size: clamp(1rem, 3vw + 1rem, 3rem);
+  }
+
+  .FlashRank {
+    padding: 2rem;
+    position: fixed;
+  }
 }

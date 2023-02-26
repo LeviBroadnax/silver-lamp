@@ -1,11 +1,26 @@
 .Example {
-  position: absolute;
+  position: fixed;
+  justify-self: right;
+  text-align: center;
   color: #111827;
-  font-size: calc(6px + 2vmin);
+  font-size: clamp(1rem, 2vw + 1rem, 2rem);
   font-family: system-ui;
   top: 5vh;
 }
 
 span.Highlight {
   color: #f87171;
+}
+
+h4::first-letter {
+  text-transform: uppercase;
+}
+
+@media (max-width: 600px) {
+  .Example {
+    top: 0;
+    margin: 1rem;
+    width: 100%;
+    height: 20svh;
+  }
 }
