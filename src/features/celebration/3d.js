@@ -1,27 +1,56 @@
-import * as three from "three";
-export const cube = () => {
-  const scene = new three.Scene();
-  const camera = new three.PerspectiveCamera(
-    75,
-    window.innerWidth / window.innerHeight,
-    0.1,
-    1000
-  );
-  const renderer = new three.WebGLRenderer();
-  renderer.setSize(visualViewport.width / 10, visualViewport.height / 10);
-  // renderer.domElement.style.backgroundColor = "white";
-  document.body.appendChild(renderer.domElement);
-  const geometry = new three.BoxGeometry();
-  const material = new three.MeshBasicMaterial({ color: 0x00ff00 });
-  const cube = new three.Mesh(geometry, material);
+import {
+  Mesh,
+  MeshBasicMaterial,
+  PerspectiveCamera,
+  Scene,
+  WebGLRenderer,
+} from "three";
 
-  scene.add(cube);
-  camera.position.z = 5;
+import { FontLoader } from "three/addons/loaders/FontLoader.js";
+import { TextGeometry } from "three/addons/geometries/TextGeometry.js";
+
+const loader = new FontLoader();
+export const render3dText = (text) => {
+  let scene, camera, renderer, textGeometry, material, mesh;
+  scene = new Scene();
+  camera = new PerspectiveCamera(60, window.innerWidth / window.innerHeight);
+  const canvas = document.querySelector("canvas.webgl");
+  if (canvas === null) return;
+  renderer = new WebGLRenderer({
+    canvas,
+    antialias: true,
+  });
+  material = new MeshBasicMaterial({ color: 0x002654 });
+
+  renderer.shadowMap.enabled = true;
+  renderer.setSize(visualViewport.width, visualViewport.height);
+  renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+  renderer.setClearColor("grey", 0);
+
+  loader.load("/helvetiker_regular.typeface.json", function (font) {
+    textGeometry = new TextGeometry(text.toLocaleLowerCase(), {
+      font: font,
+      size: 3,
+      height: 1,
+      curveSegments: 12,
+      bevelThickness: 4,
+      bevelSize: 1,
+      bevelOffset: 0,
+      bevelSegments: 5,
+    });
+    mesh = new Mesh(textGeometry, material);
+    camera.lookAt(mesh.position);
+    mesh.position.x = 100;
+    scene.add(mesh);
+  });
+  camera.position.z = 100;
   const animate = function () {
-    requestAnimationFrame(animate);
-    cube.rotation.x += 0.01;
-    cube.rotation.y += 0.01;
+    if (mesh) {
+      mesh.rotation.x += 0.01;
+      mesh.rotation.y -= 0.003;
+    }
     renderer.render(scene, camera);
+    requestAnimationFrame(animate);
   };
   animate();
 };

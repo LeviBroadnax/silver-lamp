@@ -1,8 +1,7 @@
 import { distance } from "./jaroWinkler";
 import french from "./french.json";
 
-const randomIndex = () =>
-  Math.floor(Math.random() * Math.random() * Math.random() * french.length);
+const randomIndex = () => Math.floor(Math.random() * french.length);
 
 export const queryStore = {
   byId: (idx) => french[idx],

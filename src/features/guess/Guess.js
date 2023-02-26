@@ -14,10 +14,10 @@ export default function Guess(props) {
     e.stopPropagation();
     e.key = e.key.toLowerCase();
     if (
+      e.key.length === 1 &&
       ((e.key >= "a" && e.key <= "z") ||
         (e.key >= "0" && e.key <= "9") ||
-        e.key === " ") &&
-      e.key.length === 1
+        e.key === " ")
     ) {
       setGuess(guess + e.key);
     } else if (e.key === "backspace") {
@@ -28,7 +28,7 @@ export default function Guess(props) {
       }
     } else if (e.key === "enter") {
       if (queryStore.highEnough(props.idx, guess)) {
-        Celebrate(guess.length, flips);
+        Celebrate(guess.length, flips, queryStore.byId(props.idx));
         props.onCorrect(e);
       } else {
         playWrong();

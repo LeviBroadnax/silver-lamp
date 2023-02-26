@@ -3,7 +3,7 @@ export const playFrench = (word) => {
   if (!audio) return;
   let newUrl =
     word.tts === "MISSING"
-      ? `https://d7mj4aqfscim2.cloudfront.net/tts/fr/token/${word}`
+      ? `https://d7mj4aqfscim2.cloudfront.net/tts/fr/token/${word.french}`
       : "https://d1vq87e9lcf771.cloudfront.net/" + word.tts;
   if (audio.src === newUrl) return;
   audio.loop = false;

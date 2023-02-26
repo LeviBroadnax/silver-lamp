@@ -8,17 +8,20 @@ import useStore from "../../store/Store";
 
 function App() {
   return (
-    <div className='App'>
-      <SideBar store={useStore} />
-      <FlashCard store={useStore} />
-      <Legend />
-      <audio
-        id='song'
-        autoPlay={false}
-        src='/Aux_Champs_Elysees.mp3'
-        loop={true}
-        preload='auto'></audio>
-    </div>
+    <>
+      <div className='App'>
+        <SideBar store={useStore} />
+        <FlashCard store={useStore} />
+        <Legend />
+        <audio
+          id='song'
+          autoPlay={false}
+          src='/Aux_Champs_Elysees.mp3'
+          loop={true}
+          preload='auto'></audio>
+      </div>
+      <canvas className='webgl'></canvas>
+    </>
   );
 }
 const keepInFocus = () => {
