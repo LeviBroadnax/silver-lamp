@@ -13,7 +13,7 @@ export const queryStore = {
     ) {
       newIdx = randomIndex();
     }
-    return newIdx;
+    return newIdx || 41;
   },
   highEnough: (idx, userInput) => {
     const obj = french[idx].english;

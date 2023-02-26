@@ -6,6 +6,13 @@ import Celebrate from "../celebration/Celebrations";
 import { playWrong } from "../audio/playFx";
 import { queryStore } from "../../store/FrenchQuery";
 
+setInterval(() => {
+  const input = document.querySelector("input.Guess");
+  if (input && "focus" in input && typeof input.focus === "function") {
+    input.focus();
+  }
+}, 500);
+
 export default function Guess(props) {
   const [guess, setGuess] = useState("");
   const [flips, setFlips] = useState(1);

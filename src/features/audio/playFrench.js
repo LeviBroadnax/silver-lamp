@@ -9,5 +9,5 @@ export const playFrench = (word) => {
   audio.loop = false;
   audio.volume = 1;
   audio.src = newUrl;
-  audio.play();
+  audio.play().catch((e) => {});
 };

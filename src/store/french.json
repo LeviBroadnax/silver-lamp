@@ -15074,7 +15074,7 @@
   {
     "cat": "nf",
     "categories": ["noun", "feminine"],
-    "english": "holiday, celebration",
+    "english": "holiday, celebration, feast, party",
     "exEnglish": "it's a private party",
     "exFrench": "c'est une fête privée",
     "french": "fête",
@@ -33083,7 +33083,7 @@
   {
     "cat": "det,nmi",
     "categories": ["determiner", "noun", "invariable", "masculine"],
-    "english": "sixteen",
+    "english": "sixteen, 16",
     "exEnglish": "she has been singing there since she was sixteen years old",
     "exFrench": "elle y chante depuis l'âge de seize ans",
     "french": "seize",
@@ -37269,7 +37269,7 @@
   {
     "cat": "nf",
     "categories": ["noun", "feminine"],
-    "english": "about thirty",
+    "english": "about thirty, about 30, 30ish, thirtyish",
     "exEnglish": "I'm happy to have reached thirty years old",
     "exFrench": "je suis contente d'arriver à la trentaine",
     "french": "trentaine",

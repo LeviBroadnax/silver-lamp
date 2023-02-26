@@ -16,6 +16,7 @@
   background-color: aliceblue;
   visibility: visible;
   backface-visibility: hidden;
+  transform: rotateY(0deg);
   background: linear-gradient(
     to bottom,
     #002654 0%,

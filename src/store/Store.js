@@ -8,7 +8,6 @@ const useStore = create(
     (set, get) => ({
       _words: { next: null },
       _seen: new Set(),
-
       take: (idx) => {
         const words = [];
         let word = get()._words;
@@ -22,7 +21,7 @@ const useStore = create(
         }
         return words;
       },
-      contains: (idx) => get()._seen.has(idx),
+      seen: (idx) => get()._seen.has(idx),
       add: (idx) => {
         const s = get()._seen;
         s.add(idx);

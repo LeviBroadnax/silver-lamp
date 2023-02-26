@@ -1,5 +1,6 @@
 import "./FlashCard.css";
 
+import { DragFlipOver, FlipOver, FlipToFront } from "./FlipAnimation";
 import React, { useState } from "react";
 
 import Back from "./FlashCardBack";
@@ -9,106 +10,56 @@ import Guess from "../guess/Guess";
 import Stats from "../stats/Stats";
 import { queryStore } from "../../store/FrenchQuery";
 
-const dragMobileFlip = (direction, isFlipped) => {
-  let front = document.querySelector(".Front");
-  let back = document.querySelector(".Back");
-  if (!front || !back) return;
-  if (isFlipped) {
-    if (direction === "right" || direction === "left") {
-      front.style.transform = `rotateY(${direction === "left" ? 180 : 0}deg)`;
-      back.style.transform = `rotateY(${direction === "left" ? 0 : 180}deg)`;
-    } else {
-      front.style.transform = `rotateX(${direction === "down" ? 180 : 0}deg)`;
-      back.style.transform = `rotateX(${direction === "down" ? 0 : 180}deg)`;
-    }
-  } else {
-    if (direction === "right" || direction === "left") {
-      back.style.transform = `rotateY(${direction === "left" ? 180 : 0}deg)`;
-      front.style.transform = `rotateY(${direction === "left" ? 0 : 180}deg)`;
-    } else {
-      back.style.transform = `rotateX(${direction === "down" ? 180 : 0}deg)`;
-      front.style.transform = `rotateX(${direction === "down" ? 0 : 180}deg)`;
-    }
-  }
-};
-
 export default function FlashCards(props) {
-  const add = props.store((e) => e.add);
-  const contains = props.store((e) => e.contains);
-  const [total, setTotal] = useState(0);
-  const [correct, setCorrect] = useState(0);
   const [idx, setIdx] = useState(queryStore.semiRandomIndex());
-  const [swipe, setSwipe] = useState({ x: 0, y: 0 });
-  const [flipped, setFlipped] = useState(false);
-  const [nextFlip, setNextFlip] = useState(new Date().getTime());
-  const nextWord = () => {
-    setTotal(total + 1);
-    setIdx(queryStore.semiRandomIndex(contains));
-  };
-
+  const seen = props.store((e) => e.seen);
+  const add = props.store((e) => e.add); // move to game store
+  const [total, setTotal] = useState(0); // move to game store
+  const [correct, setCorrect] = useState(0); // move to game store
   const onCorrect = (e) => {
     e.preventDefault();
-    nextWord();
+    setTotal(total + 1);
+    setIdx(queryStore.semiRandomIndex(seen));
     setCorrect(correct + 1);
   };
-
   const onWrong = (e) => {
     e.preventDefault();
     add(idx);
-    nextWord();
+    setTotal(total + 1);
+    setIdx(queryStore.semiRandomIndex(seen));
   };
-  const flipToBack = (_ev) => {
-    let front = document.querySelector(".Front");
-    let back = document.querySelector(".Back");
-    if (!front || !back) return;
-    front.style.transform = "rotateY(180deg)";
-    back.style.transform = "rotateY(0deg)";
-    setFlipped(true);
+  let nextFlipHover = new Date().getTime();
+  const onHover = (ev) => {
+    ev.preventDefault();
+    ev.stopPropagation();
+    let delta = new Date().getTime() - nextFlipHover;
+    if (delta < 1000) {
+      return;
+    } else if (ev.type === "mouseenter") {
+      nextFlip = new Date().getTime() + 1000;
+      FlipOver();
+      setTimeout(FlipToFront, 900);
+    }
   };
-  const flipToFront = (_ev) => {
-    let front = document.querySelector(".Front");
-    let back = document.querySelector(".Back");
-    if (!front || !back) return;
-    front.style.transform = "rotateY(0deg)";
-    back.style.transform = "rotateY(180deg)";
-    setFlipped(false);
-  };
+
+  let startTouch = { x: 0, y: 0 };
+  let nextFlip = new Date().getTime();
   const onSwipe = (ev) => {
     ev.preventDefault();
     ev.stopPropagation();
     let delta = new Date().getTime() - nextFlip;
-    if (delta < 1000) return;
-    if (ev.type === "touchmove") {
-      const current = {
-        x: ev.touches[0].clientX || 0,
-        y: ev.touches[0].clientY || 0,
-      };
-      const [x, y] = [
-        Math.abs(current.x - swipe.x),
-        Math.abs(current.y - swipe.y),
-      ];
-      if (x > 10 || y > 10) {
-        let swipeDirection = "";
-        if (x > y) {
-          if (current.x - swipe.x > 0) {
-            swipeDirection = "right";
-          } else {
-            swipeDirection = "left";
-          }
-        } else {
-          if (current.y - swipe.y > 0) {
-            swipeDirection = "down";
-          } else {
-            swipeDirection = "up";
-          }
-        }
-        setFlipped(!flipped);
-        setNextFlip(new Date().getTime());
-        dragMobileFlip(swipeDirection, flipped);
-        setTimeout(flipToFront, 1500);
+    if (delta < 1000) {
+      return;
+    } else if (ev.type === "touchmove") {
+      const absDx = Math.abs(ev.touches[0].clientX - startTouch.x);
+      const absDy = Math.abs(ev.touches[0].clientY - startTouch.y);
+      if (Math.max(absDx, absDy) > 10) {
+        let swipeDirection = absDx >= absDy ? "horizontal" : "vertical";
+        nextFlip = new Date().getTime() + 1000;
+        DragFlipOver(swipeDirection);
       }
     } else if (ev.type === "touchstart") {
-      setSwipe({ x: ev.touches[0].clientX, y: ev.touches[0].clientY });
+      startTouch = { x: ev.touches[0].clientX, y: ev.touches[0].clientY };
     }
   };
 
@@ -119,14 +70,12 @@ export default function FlashCards(props) {
         idx={idx}
         onCorrect={onCorrect}
         onWrong={onWrong}
-        onMouseEnter={flipToBack}
-        onMouseLeave={flipToFront}
+        onMouseEnter={onHover}
       />
       <Stats total={total} correct={correct} />
       <div
         className='FlashCard'
-        onMouseEnter={flipToBack}
-        onMouseLeave={flipToFront}
+        onMouseEnter={onHover}
         onTouchMove={onSwipe}
         onTouchStart={onSwipe}>
         <Front idx={idx} />
