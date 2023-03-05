@@ -1,5 +1,5 @@
 export const playFrench = (word) => {
-  const audio = document.querySelector("audio#FlashcardFront");
+  const audio = document.querySelector("audio#FrenchPronunciation");
   if (!audio) return;
   let newUrl =
     word.tts === "MISSING"

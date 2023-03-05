@@ -1,5 +1,6 @@
 const visible = "matrix(1, 0, 0, 1, 0, 0)";
 const hidden = "matrix3d(-1, 0, 0, 0, 0, 1, 0, 0, 0, 0, -1, 0, 0, 0, 0, 1)";
+
 export const FlipOver = () => {
   const front = document.querySelector(".Front");
   const back = document.querySelector(".Back");
@@ -13,16 +14,21 @@ export const FlipOver = () => {
   }
 };
 
-export const FlipToFront = () => {
+export const FlipToFront = (resolve) => {
   const front = document.querySelector(".Front");
   const back = document.querySelector(".Back");
   if (!front || !back) return;
   FlipAroundFromBack(front, back);
+
+  front.addEventListener("webkitTransitionEnd", () => {
+    front.removeEventListener("webkitTransitionEnd", front);
+    resolve("hover");
+  });
 };
 
 export const DragFlipOver = (direction) => {
-  let front = document.querySelector(".Front");
-  let back = document.querySelector(".Back");
+  const front = document.querySelector(".Front");
+  const back = document.querySelector(".Back");
   if (!front || !back) return;
   if (direction === "horizontal") {
     FlipAroundFromFront(front, back);
@@ -32,6 +38,7 @@ export const DragFlipOver = (direction) => {
     setTimeout(() => FlipOverFromBack(front, back), 900);
   }
 };
+
 const FlipAroundFromFront = (front, back) => {
   front.style.transform = "rotateY(180deg)";
   back.style.transform = "rotateY(0deg)";

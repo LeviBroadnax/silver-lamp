@@ -1,6 +1,6 @@
+import { playCorrect, playSong } from "../audio";
+
 import { launchConfetti } from "./confetti";
-import { playCorrect } from "../audio/playFx";
-import { playSong } from "../audio/playSong";
 
 // import { render3dText } from "./3d";
 

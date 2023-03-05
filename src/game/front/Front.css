@@ -1,0 +1,32 @@
+.Front {
+  border-top-right-radius: 0%;
+  border-bottom-left-radius: 0%;
+  background-color: aliceblue;
+  visibility: visible;
+  backface-visibility: hidden;
+  transform: rotateY(0deg);
+  background: linear-gradient(
+    to bottom,
+    #002654 0%,
+    #002654 33%,
+    #ed2939 33%,
+    #ed2939 66%,
+    #ffffff 66%,
+    #ffffff 100%
+  );
+}
+
+.Rank {
+  position: relative;
+  flex-direction: column;
+  align-self: flex-end;
+  justify-self: flex-end;
+  font-size: calc(8px + 2vmin);
+}
+
+@media (max-width: 600px) {
+  .Rank {
+    padding: 2rem;
+    position: fixed;
+  }
+}

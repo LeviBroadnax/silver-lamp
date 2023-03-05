@@ -1,21 +1,17 @@
 import "./App.css";
 
-import FlashCard from "./features/flash-card/FlashCard";
-import Legend from "./features/legend/Legend";
+import Audio from "./audio";
+import Game from "./game";
+import Legend from "./legend";
 import React from "react";
-import useStore from "./store/Store";
+import { gameStore } from "./store";
 
 function App() {
   return (
     <div className='App'>
-      <FlashCard store={useStore} />
+      <Game store={gameStore} />
       <Legend />
-      <audio
-        id='song'
-        autoPlay={false}
-        src='/Aux_Champs_Elysees.mp3'
-        loop={true}
-        preload='auto'></audio>
+      <Audio />
       <canvas className='webgl'></canvas>
     </div>
   );

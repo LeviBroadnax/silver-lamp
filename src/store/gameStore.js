@@ -3,11 +3,19 @@ import { createJSONStorage, persist } from "zustand/middleware";
 import { create } from "zustand";
 import french from "./french.json";
 
-const useStore = create(
+export const gameStore = create(
   persist(
     (set, get) => ({
       _words: { next: null },
       _seen: new Set(),
+      _correct: 0,
+      successRate: () => {
+        const { _correct, _seen } = get();
+        if (_seen.size + _correct === 0) return 0;
+        return (_correct / (_seen.size + _correct)) * 100;
+      },
+      incrementCorrect: () =>
+        set((state) => ({ _correct: state._correct + 1 })),
       take: (idx) => {
         const words = [];
         let word = get()._words;
@@ -40,4 +48,3 @@ const useStore = create(
     }
   )
 );
-export default useStore;

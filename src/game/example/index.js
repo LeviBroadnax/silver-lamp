@@ -1,13 +1,13 @@
 import "./Example.css";
 
-import React from "react";
-import { distance } from "../../store/jaroWinkler";
-import { queryStore } from "../../store/FrenchQuery";
+import { distance, frenchStore } from "../../store";
 
-const getTitleText = (idx) => queryStore.byId(idx).exEnglish;
+import React from "react";
+
+const getTitleText = (idx) => frenchStore.byId(idx).exEnglish;
 
 const getText = (idx) => {
-  let res = queryStore.byId(idx);
+  let res = frenchStore.byId(idx);
   let text = res.exFrench;
   if (text === undefined) return "No french example found";
   let wordIdx = text.indexOf(res.french);
@@ -16,8 +16,9 @@ const getText = (idx) => {
   }
   return text;
 };
+
 const getTextSections = (idx) => {
-  let res = queryStore.byId(idx);
+  let res = frenchStore.byId(idx);
   let text = res.exFrench;
   if (text === undefined) return getText(idx);
   let wordIdx = text.indexOf(res.french);

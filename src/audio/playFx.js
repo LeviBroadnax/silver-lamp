@@ -13,25 +13,24 @@ export const playWrong = () => {
   audio.play();
 };
 
-// damn this is ugly
 const ding = () => {
   var a;
   (function () {
-    a = new Audio("ding.mp3");
+    a = new Audio("fx/ding.mp3");
   })();
   return a;
 };
 const dash = () => {
   var a;
   (function () {
-    a = new Audio("dash.mp3");
+    a = new Audio("fx/dash.mp3");
   })();
   return a;
 };
 const dang = () => {
   var a;
   (function () {
-    a = new Audio("dang.mp3");
+    a = new Audio("fx/dang.mp3");
   })();
   return a;
 };

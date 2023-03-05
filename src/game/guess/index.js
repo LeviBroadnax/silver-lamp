@@ -2,12 +2,10 @@ import "./Guess.css";
 
 import React, { useEffect, useState } from "react";
 
-import Celebrate from "../celebration/Celebrations";
-import { playWrong } from "../audio/playFx";
-import { queryStore } from "../../store/FrenchQuery";
+import { frenchStore } from "../../store";
 
 setInterval(() => {
-  const input = document.querySelector("input.Guess");
+  const input = document.querySelector("input#GuessInput");
   if (input && "focus" in input && typeof input.focus === "function") {
     input.focus();
   }
@@ -18,7 +16,6 @@ export default function Guess(props) {
   const [flips, setFlips] = useState(1);
   const onKeyUp = (e) => {
     e.preventDefault();
-    e.stopPropagation();
     e.key = e.key.toLowerCase();
     if (
       e.key.length === 1 &&
@@ -34,36 +31,33 @@ export default function Guess(props) {
         setGuess(guess.slice(0, -1));
       }
     } else if (e.key === "enter") {
-      if (queryStore.highEnough(props.idx, guess)) {
-        Celebrate(guess.length, flips, queryStore.byId(props.idx));
-        props.onCorrect(e);
+      if (frenchStore.highEnough(props.idx, guess)) {
+        props.onCorrect(e, guess.length, flips);
       } else {
-        playWrong();
-        props.onMouseEnter(e);
-        setTimeout(props.onMouseLeave, 1500);
-        setTimeout(() => props.onWrong(e), 2000);
+        props.onWrong(e);
       }
       setFlips(1);
       setGuess("");
     } else if (e.key === "shift" || e.key === "tab") {
-      props.onMouseEnter(e);
-      setTimeout(props.onMouseLeave, 1500);
+      props.flipFunction(e, true);
       setFlips(flips / 2);
     }
   };
   useEffect(() => {
     if (guess.length > 0) {
-      document.querySelector(".Guess").classList.remove("hidden");
-      document.querySelector(".Guess").classList.add("visible");
+      document.querySelector("input#GuessInput").classList.remove("hidden");
+      document.querySelector("input#GuessInput").classList.add("visible");
     } else {
-      document.querySelector(".Guess").classList.add("hidden");
-      document.querySelector(".Guess").classList.remove("visible");
+      document.querySelector("input#GuessInput").classList.add("hidden");
+      document.querySelector("input#GuessInput").classList.remove("visible");
     }
   }, [guess]);
+
   return (
     <input
       autoFocus
-      className='Guess hidden'
+      id='GuessInput'
+      className='hidden'
       value={guess}
       onKeyUp={onKeyUp}
       onChange={onKeyUp}

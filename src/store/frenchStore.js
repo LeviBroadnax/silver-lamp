@@ -3,7 +3,7 @@ import french from "./french.json";
 
 const randomIndex = () => Math.floor(Math.random() * french.length);
 
-export const queryStore = {
+export const frenchStore = {
   byId: (idx) => french[idx],
   semiRandomIndex: (contains = (_idx) => false) => {
     let newIdx = randomIndex();
@@ -13,7 +13,7 @@ export const queryStore = {
     ) {
       newIdx = randomIndex();
     }
-    return newIdx || 41;
+    return newIdx;
   },
   highEnough: (idx, userInput) => {
     const obj = french[idx].english;
