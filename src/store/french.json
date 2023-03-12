@@ -40905,8 +40905,8 @@
   {
     "cat": "nadj(f)",
     "categories": ["adjective", "noun", "feminine", "no distinct feminine"],
-    "english": "sceptical, sceptic",
-    "exEnglish": "the scientific world for the most part remains sceptical",
+    "english": "skeptical, skeptic",
+    "exEnglish": "the scientific world for the most part remains skeptical",
     "exFrench": "le monde scientifique reste en majorité sceptique",
     "french": "sceptique",
     "rank": 4064,
@@ -43252,7 +43252,7 @@
   {
     "cat": "nadj",
     "categories": ["noun"],
-    "english": "naïve, innocent",
+    "english": "naive, innocent",
     "exEnglish": "she remains extremely naïve on the topic",
     "exFrench": "elle reste extrêmement naïve sur le sujet",
     "french": "naïf",

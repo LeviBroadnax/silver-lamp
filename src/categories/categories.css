@@ -1,0 +1,60 @@
+@import url("notyf/notyf.min.css");
+.CategoryContainer {
+  font-family: "Helvetica";
+  display: flex;
+  width: 12svw;
+  max-height: 100svh;
+  justify-content: center;
+  flex-flow: column wrap;
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  /* top: unset; bottom: 0; left: 5svw; height: 10svh; */
+}
+
+.Option {
+  font-size: 12px;
+  line-height: 1.4;
+  padding: 8px 0px 6px 16px;
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  transition-duration: 0.5s;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.Option:hover {
+  background-color: #e7f1ff;
+  color: blue;
+  background-color: rgba(36, 33, 46, 0.5);
+}
+
+.Option:focus {
+  box-shadow: none;
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+}
+
+.Selected {
+  background-color: #e7f1ff;
+  color: #1677ff;
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.Selected:after {
+  position: absolute;
+  content: "";
+  border-style: solid;
+  border-width: 30px 30px 0 0;
+  border-color: transparent teal transparent transparent;
+  right: 0;
+}
+
+@media screen and (max-width: 964px) {
+  .CategoryContainer {
+    display: none;
+  }
+}

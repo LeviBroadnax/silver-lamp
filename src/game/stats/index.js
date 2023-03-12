@@ -1,9 +1,11 @@
 import "./Stats.css";
 
 import React from "react";
+import { gameStore } from "../../store";
 
-export default function Stats(props) {
-  const success = props.successRate();
+export default function Stats() {
+  const successRate = gameStore((e) => e.successRate);
+  const success = successRate();
   if (!Number.isNaN(success)) {
     return <div className='Stats hardlyinteresting'>{success.toFixed(2)}%</div>;
   } else {

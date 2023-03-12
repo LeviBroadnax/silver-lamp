@@ -1,8 +1,7 @@
 import "./Guess.css";
 
 import React, { useEffect, useState } from "react";
-
-import { frenchStore } from "../../store";
+import { frenchStore, gameStore } from "../../store";
 
 setInterval(() => {
   const input = document.querySelector("input#GuessInput");
@@ -12,6 +11,10 @@ setInterval(() => {
 }, 500);
 
 export default function Guess(props) {
+  const highEnough = frenchStore((e) => e.highEnough);
+  const currentWord = gameStore((e) => e.currentWord);
+  const word = currentWord();
+
   const [guess, setGuess] = useState("");
   const [flips, setFlips] = useState(1);
   const onKeyUp = (e) => {
@@ -31,7 +34,7 @@ export default function Guess(props) {
         setGuess(guess.slice(0, -1));
       }
     } else if (e.key === "enter") {
-      if (frenchStore.highEnough(props.idx, guess)) {
+      if (highEnough(word, guess)) {
         props.onCorrect(e, guess.length, flips);
       } else {
         props.onWrong(e);

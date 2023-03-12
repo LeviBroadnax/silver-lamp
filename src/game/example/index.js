@@ -1,13 +1,13 @@
 import "./Example.css";
 
-import { distance, frenchStore } from "../../store";
-
 import React from "react";
+import { distance } from "../../store";
+import { gameStore } from "../../store";
 
-const getTitleText = (idx) => frenchStore.byId(idx).exEnglish;
+const getTitleText = (word) => word.exEnglish;
 
-const getText = (idx) => {
-  let res = frenchStore.byId(idx);
+const getText = (word) => {
+  let res = word;
   let text = res.exFrench;
   if (text === undefined) return "No french example found";
   let wordIdx = text.indexOf(res.french);
@@ -17,10 +17,10 @@ const getText = (idx) => {
   return text;
 };
 
-const getTextSections = (idx) => {
-  let res = frenchStore.byId(idx);
+const getTextSections = (word) => {
+  let res = word;
   let text = res.exFrench;
-  if (text === undefined) return getText(idx);
+  if (text === undefined) return getText(word);
   let wordIdx = text.indexOf(res.french);
   let highlightedWord = res.french;
   if (wordIdx === -1) {
@@ -47,12 +47,14 @@ const getTextSections = (idx) => {
 };
 
 export default function Example(props) {
-  let sections = getTextSections(props.idx);
+  const currentWord = gameStore((e) => e.currentWord);
+  const word = currentWord();
+  let sections = getTextSections(word);
   if (sections.length === 3) {
     return (
       <h4
         className='Example'
-        title={getTitleText(props.idx)}
+        title={getTitleText(word)}
         onMouseEnter={props.onMouseEnter}
         onMouseLeave={props.onMouseLeave}>
         {sections[0]}
@@ -64,10 +66,10 @@ export default function Example(props) {
   return (
     <h4
       className='Example'
-      title={getTitleText(props.idx)}
+      title={getTitleText(word)}
       onMouseEnter={props.onMouseEnter}
       onMouseLeave={props.onMouseLeave}>
-      {getText(props.idx)}
+      {getText(word)}
     </h4>
   );
 }

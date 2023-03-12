@@ -2,6 +2,7 @@ import { createJSONStorage, persist } from "zustand/middleware";
 
 import { create } from "zustand";
 import french from "./french.json";
+import { frenchStore } from "./frenchStore";
 
 export const gameStore = create(
   persist(
@@ -9,10 +10,17 @@ export const gameStore = create(
       _words: { next: null },
       _seen: new Set(),
       _correct: 0,
+      _currentWord: undefined,
       successRate: () => {
         const { _correct, _seen } = get();
         if (_seen.size + _correct === 0) return 0;
         return (_correct / (_seen.size + _correct)) * 100;
+      },
+      currentWord: () => {
+        if (get()._currentWord === undefined) {
+          frenchStore.getState().nextWord();
+        }
+        return get()._currentWord;
       },
       incrementCorrect: () =>
         set((state) => ({ _correct: state._correct + 1 })),
@@ -29,12 +37,13 @@ export const gameStore = create(
         }
         return words;
       },
-      seen: (idx) => get()._seen.has(idx),
+      seen: (idx) => "has" in get()._seen && get()._seen.has(idx),
       add: (idx) => {
-        const s = get()._seen;
-        s.add(idx);
         return set((state) => ({
-          _seen: s,
+          _seen:
+            "has" in get()._seen
+              ? new Set(get()._seen).add(idx)
+              : new Set().add(idx),
           _words: {
             next: state._words,
             word: french[idx],
@@ -43,8 +52,9 @@ export const gameStore = create(
       },
     }),
     {
-      name: "french-cards",
-      storage: createJSONStorage(),
+      name: "game-store",
+      storage: createJSONStorage(() => sessionStorage),
+      version: "1.0.4-alpha",
     }
   )
 );
