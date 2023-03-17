@@ -1,4 +1,4 @@
-import "./App.css";
+import "./styles/App.css";
 
 import Audio from "./audio";
 import Categories from "./categories";
@@ -13,7 +13,6 @@ function App() {
       <Legend />
       <Audio />
       <Categories />
-      <canvas className='webgl'></canvas>
     </div>
   );
 }

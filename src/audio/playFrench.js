@@ -1,6 +1,9 @@
+let lastWord = "";
 export const playFrench = (word) => {
   const audio = document.querySelector("audio#FrenchPronunciation");
   if (!audio) return;
+  if (lastWord === word.french) return;
+  lastWord = word.french;
   let newUrl =
     word.tts === "MISSING"
       ? `https://d7mj4aqfscim2.cloudfront.net/tts/fr/token/${word.french}`

@@ -2,15 +2,9 @@ import { playCorrect, playSong } from "../audio";
 
 import { launchConfetti } from "./confetti";
 
-// import { render3dText } from "./3d";
-
-export default function Celebrate(length, flips, word) {
+export default function Celebrate(length, flips = 1, isOral = false) {
   const scale = length * flips;
   launchConfetti(scale);
-  playSong(scale);
+  playSong(scale, isOral);
   playCorrect();
-  if (word.french === undefined) {
-    return "PANIC";
-  }
-  // render3dText(word.french);
 }

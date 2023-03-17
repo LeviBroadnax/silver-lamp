@@ -7,12 +7,12 @@
   transform: rotateY(0deg);
   background: linear-gradient(
     to bottom,
-    #002654 0%,
-    #002654 33%,
-    #ed2939 33%,
-    #ed2939 66%,
-    #ffffff 66%,
-    #ffffff 100%
+    var(--french-blue) 0%,
+    var(--french-blue) 33%,
+    var(--french-red) 33%,
+    var(--french-red) 66%,
+    var(--white) 66%,
+    var(--white) 100%
   );
 }
 

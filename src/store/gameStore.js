@@ -11,6 +11,7 @@ export const gameStore = create(
       _seen: new Set(),
       _correct: 0,
       _currentWord: undefined,
+      inputType: "text",
       successRate: () => {
         const { _correct, _seen } = get();
         if (_seen.size + _correct === 0) return 0;
@@ -54,7 +55,7 @@ export const gameStore = create(
     {
       name: "game-store",
       storage: createJSONStorage(() => sessionStorage),
-      version: "1.0.4-alpha",
+      version: Date.now().toString(),
     }
   )
 );

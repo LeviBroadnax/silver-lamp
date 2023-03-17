@@ -54,11 +54,16 @@ export const frenchStore = create(
         }
         return result;
       },
+      highEnoughOral: (word, vocal, confidence) => {
+        if (word === undefined) return false;
+        vocal = vocal.trim();
+        return distance(word.french, vocal) > 0.75 && confidence > 0.75;
+      },
     }),
     {
       name: "french-store",
       storage: createJSONStorage(() => sessionStorage),
-      version: "1.0.4-alpha",
+      version: "1.0.5-alpha",
     }
   )
 );

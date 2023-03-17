@@ -28,3 +28,19 @@ input {
     background-color: rgba(0, 0, 0, 0.7);
   }
 }
+
+.oral {
+  border-radius: 1.5rem;
+  border-width: 0.06rem;
+  padding: 0.5rem;
+  max-width: 97vw;
+  max-width: 97svw;
+  max-height: 95vh;
+  max-height: 95svh;
+  min-width: 25svw;
+  position: absolute;
+  bottom: 0;
+  backdrop-filter: blur(12px);
+  text-align: center;
+  background-color: var(--french-blue);
+}

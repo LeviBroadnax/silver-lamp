@@ -1,3 +1,4 @@
+@import url("./vars.css");
 .App {
   text-align: center;
   background-color: aliceblue;
@@ -12,13 +13,6 @@
   max-width: 97svw;
   max-height: 95vh;
   max-height: 95svh;
-}
-canvas.webgl {
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0);
-  pointer-events: none;
 }
 
 @media (min-width: 800px) {

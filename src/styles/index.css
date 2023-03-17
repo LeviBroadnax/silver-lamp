@@ -12,7 +12,7 @@ body {
   max-height: 100svh;
   overflow: hidden;
 }
-
+/* declare vars */
 .Content {
   display: flex;
   flex-direction: column;
@@ -52,5 +52,34 @@ body {
   }
   body {
     position: relative;
+  }
+}
+
+.fade-out {
+  animation: fadeOut 10s forwards;
+  transition: opacity 0.5s;
+}
+
+.fade-out:hover {
+  animation-play-state: paused;
+  opacity: 1 !important;
+}
+
+.fade-out-hover {
+  animation: fadeOut 30s forwards;
+  transition: opacity 0.5s;
+}
+
+.fade-out-hover:hover {
+  animation-play-state: paused;
+  opacity: 1 !important;
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
   }
 }

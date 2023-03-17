@@ -93,7 +93,7 @@ export default function Categories() {
     isChecked(opt) ? "Option Selected" : "Option";
 
   return (
-    <div className='CategoryContainer'>
+    <div className='CategoryContainer fade-out'>
       {options.map((opt, idx) => (
         <div
           key={opt.display + idx}

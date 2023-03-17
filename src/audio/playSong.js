@@ -1,7 +1,7 @@
 let secondsLeft = 0;
 let interval;
 
-export const playSong = (scale) => {
+export const playSong = (scale, isOral) => {
   const audio = document.querySelector("audio#song");
   secondsLeft = Math.max(0, secondsLeft);
   if (!audio) return "panic";
@@ -9,6 +9,9 @@ export const playSong = (scale) => {
   if (audio) {
     audio.play();
     secondsLeft += scale * 1000;
+    if (isOral) {
+      secondsLeft += 4000;
+    }
     if (interval) {
       clearInterval(interval);
     }
