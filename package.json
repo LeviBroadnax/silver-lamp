@@ -9,15 +9,15 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-native-async-storage": "^0.0.1",
-    "react-scripts": "5.0.1",
     "three": "^0.149.0",
     "zustand": "^4.3.3"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack",
+    "start": "webpack serve --open",
+    "server": "node server.js",
+    "watch": "webpack --watch"
   },
   "eslintConfig": {
     "extends": [
@@ -38,6 +38,20 @@
     ]
   },
   "devDependencies": {
-    "lil-gui": "^0.18.0"
+    "@types/canvas-confetti": "^1.6.0",
+    "@types/jest": "^29.5.0",
+    "@types/node": "^18.15.3",
+    "@types/react": "^18.0.28",
+    "@types/react-dom": "^18.0.11",
+    "@types/web": "^0.0.99",
+    "css-loader": "^6.7.3",
+    "html-webpack-plugin": "^5.5.0",
+    "style-loader": "^3.3.2",
+    "ts-loader": "^9.4.2",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.0.2",
+    "webpack": "^5.76.2",
+    "webpack-cli": "^5.0.1",
+    "webpack-dev-server": "^4.13.1"
   }
 }
