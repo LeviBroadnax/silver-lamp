@@ -1,4 +1,7 @@
-node_modules/
-*.code-workspace
 build/
 coverage/
+dist/
+node_modules/
+
+
+*.code-workspace

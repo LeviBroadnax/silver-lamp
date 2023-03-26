@@ -1,11 +1,12 @@
+import { IWord } from "../../store";
 import React from "react";
-import { gameStore } from "../../store";
-import { playFrench } from "../../audio";
 
-export default function Front() {
-  const currentWord = gameStore((e) => e.currentWord);
-  const word = currentWord();
-  playFrench(word);
+interface FrontProps {
+  word: IWord;
+}
+
+export default function Front(props: FrontProps) {
+  const word = props.word;
   return (
     <div className='CardContainer Front'>
       <div className='Rank hardlyinteresting'>({word.rank})</div>

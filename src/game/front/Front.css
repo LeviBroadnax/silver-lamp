@@ -5,15 +5,7 @@
   visibility: visible;
   backface-visibility: hidden;
   transform: rotateY(0deg);
-  background: linear-gradient(
-    to bottom,
-    var(--french-blue) 0%,
-    var(--french-blue) 33%,
-    var(--french-red) 33%,
-    var(--french-red) 66%,
-    var(--white) 66%,
-    var(--white) 100%
-  );
+  background: var(--french-colors);
 }
 
 .Rank {

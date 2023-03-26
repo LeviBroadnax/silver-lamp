@@ -1,42 +1,26 @@
+import { IWord, gameStore } from "../store";
 import { KeyboardIcon, MicrophoneIcon } from "../styles/keys";
-import React, { useState } from "react";
-import { frenchStore, gameStore } from "../store";
+import React, { useEffect, useState } from "react";
 import { onSwipe, onUserFlip } from "./flipInputs";
 
 import Back from "./back";
-import Celebrate from "../celebration";
 import Example from "./example";
 import Front from "./front";
 import Guess from "./guess";
 import { Notyf } from "notyf";
 import Stats from "./stats";
-import { playWrong } from "../audio";
+import { playFrench } from "../audio";
+import { useStore } from "zustand";
 import { useToggle } from "../hooks";
 
 const notif = new Notyf();
+
 export default function Game() {
-  const nextWord = frenchStore((e) => e.nextWord);
-  const [add, incrementCorrect, currentWord] = gameStore((e) => [
-    e.add,
-    e.incrementCorrect,
-    e.currentWord,
-  ]);
+  const store = useStore(gameStore);
+  const [word, setWord] = useState<IWord>(store.currentWord());
+
   const [clicked, setClicked] = useState(false);
   const [isOral, toggleIsOral] = useToggle(false);
-
-  const onCorrect = () => {
-    onUserFlip(true).then(() => {
-      nextWord();
-      incrementCorrect();
-    });
-  };
-
-  const onWrong = () => {
-    onUserFlip(true).then(() => {
-      add(currentWord().rank - 1);
-      nextWord();
-    });
-  };
 
   const onClick = () => {
     if (!("webkitSpeechRecognition" in window)) {
@@ -49,6 +33,11 @@ export default function Game() {
       setClicked(false);
     }, 800);
   };
+
+  useEffect(() => {
+    setWord(store.currentWord());
+    playFrench(store.currentWord());
+  }, [store.currentWord()]);
 
   return (
     <>
@@ -69,8 +58,8 @@ export default function Game() {
           onMouseEnter={(ev) => onUserFlip(ev)}
           onTouchMove={onSwipe}
           onTouchStart={onSwipe}>
-          <Front />
-          <Back />
+          <Front word={word} />
+          <Back word={word} />
         </div>
       </div>
     </>

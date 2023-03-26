@@ -6,13 +6,14 @@ import { Notyf } from "notyf";
 import { useAssessment } from "../../hooks";
 
 const notif = new Notyf();
+
 const GuessOral = (props: GuessProps): JSX.Element => {
   const highEnoughOral = frenchStore((e) => e.highEnoughOral);
   const currentWord = gameStore((e) => e.currentWord);
 
   const [lastWord, setLastWord] = useState("");
   const [isListening, setIsListening] = useState(true);
-  const assess = useAssessment();
+  const [correct, incorrect] = useAssessment();
 
   useEffect(() => {
     const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;;
@@ -34,23 +35,19 @@ const GuessOral = (props: GuessProps): JSX.Element => {
     };
 
     recognition.onresult = (event: SpeechRecognitionResult) => {
-      // if ('results' not in ev && !ev.results) return;
-
       let interimTranscript = "";
-
       for (let i = event.resultIndex; i < event.results.length; i++) {
         const result = event.results[i];
         const text = result[0].transcript.trim();
         const confidence = result[0].confidence;
-
         if (result.isFinal) {
           setLastWord(
             `heard: ${text} with ${(confidence * 100).toFixed(2)}% confidence`
           );
           if (highEnoughOral(currentWord(), text, confidence)) {
-            assess.ref.correct();
+            correct();
           } else {
-            assess.ref.incorrect();
+            incorrect();
           }
         } else {
           interimTranscript += text;
@@ -65,10 +62,8 @@ const GuessOral = (props: GuessProps): JSX.Element => {
     const stopRecognition = () => {
       recognition.stop();
     };
+
     startRecognition();
-
-
-
     return () => {
       recognition.onend = null;
       recognition.stop();

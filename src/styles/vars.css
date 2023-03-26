@@ -1,6 +1,32 @@
 :root {
-  --french-blue: #002654;
-  --french-red: #ed2939;
-  --white: #ffffff;
-  --usa-red: #b22234;
+  --french-primary: #002654;
+  --french-secondary: #ed2939;
+  --english-primary: #b22234;
+  --english-secondary: #fff;
+  --french-colors: linear-gradient(
+    to bottom,
+    #002654 0%,
+    #002654 33%,
+    #ed2939 33%,
+    #ed2939 66%,
+    #ffffff 66%,
+    #ffffff 100%
+  );
+  --english-colors: linear-gradient(
+    to bottom,
+    #b22234 0%,
+    #b22234 14.28%,
+    white 14.28%,
+    white 28.56%,
+    #b22234 28.56%,
+    #b22234 42.84%,
+    white 42.84%,
+    white 57.12%,
+    #b22234 57.12%,
+    #b22234 71.4%,
+    white 71.4%,
+    white 85.68%,
+    #b22234 85.68%,
+    #b22234 100%
+  );
 }

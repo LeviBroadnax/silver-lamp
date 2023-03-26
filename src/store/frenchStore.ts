@@ -5,11 +5,11 @@ import { create } from "zustand";
 
 interface FrenchState {
   _selectedCategories: string[];
+  _semiRandomIndex: () => number;
   setSelectedCategories: (categories: string[]) => void;
   selectedCategories: () => string[];
   byId: (idx: number) => IWord;
   byCategories: (categories: string[]) => number[];
-  _semiRandomIndex: () => number;
   nextWord: () => void;
   highEnough: (word: IWord, userInput: string) => boolean;
   highEnoughOral: (word: IWord, vocal: string, confidence: number) => boolean;
@@ -19,6 +19,16 @@ export const frenchStore = create<FrenchState>()(
   persist(
     (set, get) => ({
       _selectedCategories: [],
+      _semiRandomIndex: () => {
+        const contains = gameStore.getState().seen;
+        const choices = get().byCategories(get()._selectedCategories);
+        const randomIndex = () => Math.floor(Math.random() * choices.length);
+        let newIdx = randomIndex();
+        while (contains(newIdx)) {
+          newIdx = randomIndex();
+        }
+        return choices[newIdx];
+      },
       setSelectedCategories: (categories) =>
         set(() => ({ _selectedCategories: [...categories] })),
       selectedCategories: () => get()._selectedCategories,
@@ -35,16 +45,7 @@ export const frenchStore = create<FrenchState>()(
         }
         return result;
       },
-      _semiRandomIndex: () => {
-        const contains = gameStore.getState().seen;
-        const choices = get().byCategories(get()._selectedCategories);
-        const randomIndex = () => Math.floor(Math.random() * choices.length);
-        let newIdx = randomIndex();
-        while (contains(newIdx)) {
-          newIdx = randomIndex();
-        }
-        return choices[newIdx];
-      },
+
       nextWord: () => {
         const idx = get()._semiRandomIndex();
         gameStore.setState({ _currentWord: french[idx] });

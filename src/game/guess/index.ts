@@ -4,10 +4,7 @@ import Guess from "./Guess";
 
 export interface GuessProps {
   isOral: boolean;
-  flipFunction: (
-    e: React.KeyboardEvent<HTMLInputElement>,
-    isShift: boolean
-  ) => void;
+  flipFunction: (ev: React.MouseEvent | React.KeyboardEvent | true) => void;
 }
 
 export default Guess;

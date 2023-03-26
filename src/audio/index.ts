@@ -1,4 +1,4 @@
-import { playCorrect, playWrong } from "./playFx";
+import { playCorrect, playIncorrect } from "./playFx";
 
 import Audio from "./Audio";
 import React from "react";
@@ -7,4 +7,4 @@ import { playMidi } from "./playMidi";
 import { playSong } from "./playSong";
 
 export default Audio;
-export { playCorrect, playWrong, playFrench, playSong, playMidi };
+export { playCorrect, playIncorrect, playFrench, playSong, playMidi };

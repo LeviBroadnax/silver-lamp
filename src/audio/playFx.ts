@@ -6,7 +6,7 @@ export const playCorrect = () => {
   audio.play();
 };
 
-export const playWrong = () => {
+export const playIncorrect = () => {
   const audio = dang();
   audio.loop = false;
   audio.volume = 0.3;

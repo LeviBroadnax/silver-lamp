@@ -8,7 +8,6 @@ interface GameState {
   _seen: Set<number | unknown>;
   _correct: number;
   _currentWord: IWord | undefined;
-  inputType: "text" | "oral";
   successRate: () => number;
   currentWord: () => IWord;
   incrementCorrect: () => void;
@@ -24,7 +23,6 @@ export const gameStore = create<GameState>()(
       _seen: new Set<number>(),
       _correct: 0,
       _currentWord: undefined,
-      inputType: "text",
       successRate: () => {
         const { _correct, _seen } = get();
         if (_seen.size + _correct === 0) return 0;

@@ -14,10 +14,4 @@ export interface IWord {
   tts: string;
 }
 
-export enum Assessment {
-  CORRECT = "correct",
-  INCORRECT = "incorrect",
-  UNANSWERED = "unanswered",
-}
-
 export { gameStore, frenchStore, distance, french };

@@ -17,37 +17,30 @@ const GuessType = (props: GuessProps) => {
 
   const [guess, setGuess] = useState("");
   const [flips, setFlips] = useState(1);
-  const assess = useAssessment();
+  const [correct, incorrect] = useAssessment();
 
-  const onKeyUp = (e: React.KeyboardEvent<HTMLInputElement>) => {
+  const onChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     e.preventDefault();
-    e.key = e.key.toLowerCase();
-    if (
-      e.key.length === 1 &&
-      ((e.key >= "a" && e.key <= "z") ||
-        (e.key >= "0" && e.key <= "9") ||
-        e.key === " ")
-    ) {
-      setGuess(guess + e.key);
-    } else if (e.key === "backspace") {
-      if (e.ctrlKey) {
-        setGuess("");
-      } else {
-        setGuess(guess.slice(0, -1));
-      }
-    } else if (e.key === "enter") {
+    const newGuess = e.target.value.toLowerCase();
+    setGuess(newGuess);
+  };
+
+  const onKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
+    if (e.key === "Enter" && guess.length > 0) {
       if (highEnough(currentWord(), guess)) {
-        assess.ref.correct();
+        correct();
       } else {
-        assess.ref.incorrect();
-        setFlips(1);
-        setGuess("");
+        incorrect();
       }
-    } else if (e.key === "shift" || e.key === "tab") {
-      props.flipFunction(e, true);
+      setFlips(1);
+      setGuess("");
+    } else if (e.key === "Shift" || e.key === "Tab") {
+      e.preventDefault();
+      props.flipFunction(true);
       setFlips(flips / 2);
     }
   };
+
   useEffect(() => {
     const guessInput = document.querySelector("input#GuessInput");
     if (guessInput === null) return;
@@ -64,10 +57,8 @@ const GuessType = (props: GuessProps) => {
       id='GuessInput'
       className='hidden'
       value={guess}
-      onKeyUp={(ev) => onKeyUp(ev)}
-      onKeyDown={(e) => {
-        e.preventDefault();
-      }}
+      onChange={(ev) => onChange(ev)}
+      onKeyDown={(ev) => onKeyDown(ev)}
     />
   );
 };
