@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { frenchStore, gameStore } from "../../store";
 
 import { GuessProps } from "."
+import styles from "./Guess.module.css";
 import { useAssessment } from "../../hooks";
 
 setInterval(() => {
@@ -41,21 +42,11 @@ const GuessType = (props: GuessProps) => {
     }
   };
 
-  useEffect(() => {
-    const guessInput = document.querySelector("input#GuessInput");
-    if (guessInput === null) return;
-    if (guess.length > 0) {
-      guessInput.classList.replace("hidden", "visible")
-    } else {
-      guessInput.classList.replace("visible", "hidden")
-    }
-  }, [guess]);
-
   return (
     <input
       autoFocus
       id='GuessInput'
-      className='hidden'
+      className={(guess.length === 0) ? styles.hidden : styles.visible}
       value={guess}
       onChange={(ev) => onChange(ev)}
       onKeyDown={(ev) => onKeyDown(ev)}

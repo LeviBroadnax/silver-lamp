@@ -1,0 +1,45 @@
+.legend {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  padding: 0px 10px 10px 0px;
+  box-sizing: unset;
+  overflow-y: auto;
+  margin: 1rem;
+  color: rgba(0, 0, 0, 0.25);
+  fill: rgba(0, 0, 0, 0.25);
+}
+
+.legendItem {
+  display: flex;
+  align-items: self-end;
+  justify-content: space-between;
+  margin-right: 10px;
+}
+
+.fade {
+  animation: fadeKeyframes 10s forwards;
+  transition: opacity 0.5s;
+  width: fit-content;
+}
+
+.fade:hover {
+  animation-play-state: paused !important;
+  opacity: 1 !important;
+}
+
+@keyframes fadeKeyframes {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@media (max-width: 600px) {
+  .legend {
+    visibility: hidden !important;
+    display: none !important;
+  }
+}

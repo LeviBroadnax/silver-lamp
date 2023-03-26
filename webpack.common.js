@@ -8,7 +8,7 @@ module.exports = {
     path: path.resolve(__dirname, "dist"),
   },
   resolve: {
-    extensions: [".tsx", ".ts", ".js", ".jsx"],
+    extensions: [".tsx", ".ts", ".js"],
   },
   module: {
     rules: [
@@ -20,7 +20,6 @@ module.exports = {
       {
         test: /\.css$/,
         use: ["style-loader", "css-loader"],
-        exclude: /node_modules/,
       },
     ],
   },

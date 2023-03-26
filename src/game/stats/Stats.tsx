@@ -1,11 +1,12 @@
 import React from "react";
 import { gameStore } from "../../store";
+import styles from "./Stats.module.css";
 
 export default function Stats() {
   const successRate = gameStore((e) => e.successRate);
   const success = successRate();
   if (!Number.isNaN(success)) {
-    return <div className='Stats hardlyinteresting'>{success.toFixed(2)}%</div>;
+    return <div className={styles.Stats}> {success.toFixed(2)} %</div >;
   }
   return <></>;
 }

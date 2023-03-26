@@ -1,5 +1,5 @@
-import { IWord, distance, french, gameStore } from "./index";
 import { createJSONStorage, persist } from "zustand/middleware";
+import { distance, french, gameStore } from "./index";
 
 import { create } from "zustand";
 

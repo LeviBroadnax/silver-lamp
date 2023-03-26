@@ -1,5 +1,3 @@
-import "./Guess.css";
-
 import Guess from "./Guess";
 
 export interface GuessProps {

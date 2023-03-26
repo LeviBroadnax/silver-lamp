@@ -2,8 +2,8 @@ const visible = "matrix(1, 0, 0, 1, 0, 0)";
 const hidden = "matrix3d(-1, 0, 0, 0, 0, 1, 0, 0, 0, 0, -1, 0, 0, 0, 0, 1)";
 
 const getFaces = (): HTMLDivElement[] => [
-  document.querySelector(".Front") as HTMLDivElement,
-  document.querySelector(".Back") as HTMLDivElement,
+  document.getElementById("Front") as HTMLDivElement,
+  document.getElementById("Back") as HTMLDivElement,
 ];
 
 const FlipAroundFromFront = (front: HTMLDivElement, back: HTMLDivElement) => {

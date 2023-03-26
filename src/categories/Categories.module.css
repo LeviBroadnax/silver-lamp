@@ -2,14 +2,29 @@
   font-family: "Helvetica";
   display: flex;
   width: 12svw;
-  max-height: 100svh;
+  max-height: 80svh;
   justify-content: center;
   flex-flow: column wrap;
   position: absolute;
   right: 0;
   top: 0;
   bottom: 0;
-  /* top: unset; bottom: 0; left: 5svw; height: 10svh; */
+  animation: fadeKeyframes 10s forwards;
+  transition: opacity 0.5s;
+}
+
+.CategoryContainer:hover {
+  animation-play-state: paused !important;
+  opacity: 1 !important;
+}
+
+@keyframes fadeKeyframes {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
 }
 
 .Option {
@@ -21,11 +36,13 @@
   text-align: center;
   transition-duration: 0.5s;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  color: rgba(0, 0, 0, 0.75);
+  fill: rgba(0, 0, 0, 0.75);
 }
 
 .Option:hover {
   background-color: #e7f1ff;
-  color: blue;
+  color: whitesmoke;
   background-color: rgba(36, 33, 46, 0.5);
 }
 
@@ -37,7 +54,6 @@
 
 .Selected {
   background-color: #e7f1ff;
-  color: #1677ff;
   position: relative;
   border-radius: 12px;
   overflow: hidden;

@@ -1,15 +1,14 @@
 import React, { useEffect, useState } from "react";
 import { frenchStore, gameStore } from "../../store";
+import { useAssessment, useNotification } from "../../hooks";
 
 import { GuessProps } from ".";
-import { Notyf } from "notyf";
-import { useAssessment } from "../../hooks";
-
-const notif = new Notyf();
+import styles from "./Guess.module.css";
 
 const GuessOral = (props: GuessProps): JSX.Element => {
   const highEnoughOral = frenchStore((e) => e.highEnoughOral);
   const currentWord = gameStore((e) => e.currentWord);
+  const { showSuccess, showError } = useNotification();
 
   const [lastWord, setLastWord] = useState("");
   const [isListening, setIsListening] = useState(true);
@@ -18,7 +17,7 @@ const GuessOral = (props: GuessProps): JSX.Element => {
   useEffect(() => {
     const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;;
     if (!SpeechRecognition) {
-      notif.error("Sorry, your browser does not support speech recognition.");
+      showError("Sorry, your browser does not support speech recognition.");
       return;
     }
     const recognition = new SpeechRecognition();
@@ -70,7 +69,7 @@ const GuessOral = (props: GuessProps): JSX.Element => {
     };
   }, [isListening]);
 
-  return <h3 className='oral mildlyinteresting'>{lastWord}</h3>;
+  return <h3 className={styles.Oral}>{lastWord}</h3>;
 };
 
 export default GuessOral;

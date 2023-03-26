@@ -1,6 +1,7 @@
-import { IWord, distance, gameStore } from "../../store";
+import { distance, gameStore } from "../../store";
 
 import React from "react";
+import styles from "./Example.module.css";
 
 const getTitleText = (word: IWord) => word.exEnglish;
 
@@ -44,36 +45,24 @@ const getTextSections = (word: IWord) => {
   return [first, second, third];
 };
 
-interface ExampleProps {
-  onMouseEnter: () => void;
-  onMouseLeave: () => void;
-}
-
-export default function Example(/*props: ExampleProps*/) {
+export default function Example() {
   const currentWord = gameStore((e) => e.currentWord);
   const word = currentWord();
   let sections = getTextSections(word);
   if (sections.length === 3) {
     return (
       <h4
-        className='Example'
+        className={styles.Example}
         title={getTitleText(word)}
-      // onMouseEnter={props.onMouseEnter}
-      // onMouseLeave={props.onMouseLeave}
       >
         {sections[0]}
-        <span className='Highlight'>{sections[1]}</span>
+        <span className={styles.Highlight}>{sections[1]}</span>
         {sections[2]}
       </h4>
     );
   }
   return (
-    <h4
-      className='Example'
-      title={getTitleText(word)}
-    // onMouseEnter={props.onMouseEnter}
-    // onMouseLeave={props.onMouseLeave}
-    >
+    <h4 className={styles.Example} title={getTitleText(word)}>
       {getText(word)}
     </h4>
   );

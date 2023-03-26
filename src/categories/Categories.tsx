@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 
-import { Notyf } from "notyf";
 import { frenchStore } from "../store";
+import styles from "./Categories.module.css";
 
 interface IOption {
   display: string;
@@ -46,11 +46,6 @@ export default function Categories() {
     }
   };
 
-  // useEffect(() => {
-  //   assertSelection();
-  //   setSelectedCategories(selected);
-  // }, [selected]);
-
   const isChecked = (opt: IOption): boolean => {
     const selectedSet = new Set(selectedCategories());
     return selectedSet.has(opt.value);
@@ -78,17 +73,22 @@ export default function Categories() {
     }
   };
 
-  const getOptionClass = (opt: IOption) =>
-    isChecked(opt) ? "Option Selected" : "Option";
+  const getOptionClass = (opt: IOption) => {
+    if (isChecked(opt)) {
+      return `${styles.Option} ${styles.Selected}`;
+    } else {
+      return `${styles.Option}`
+    }
+  };
 
   return (
-    <div className='CategoryContainer fade-out'>
+    <div className={styles.CategoryContainer}>
       {options.map((opt: IOption, idx: number) => (
         <div
           key={opt.display + idx}
           className={getOptionClass(opt)}
           onClick={(ev) => onClick(ev, opt)}>
-          <div className='slightlyinteresting'>{opt.display}</div>
+          {opt.display}
         </div>
       ))}
     </div>
