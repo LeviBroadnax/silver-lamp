@@ -1,21 +1,21 @@
 import React, { useEffect, useState } from "react";
-import { frenchStore, gameStore } from "../../store";
 import { useAssessment, useNotification } from "../../hooks";
+import { frenchStore, gameStore } from "../../store";
 
 import { GuessProps } from ".";
 import styles from "./Guess.module.css";
 
-const GuessOral = (props: GuessProps): JSX.Element => {
+export default function GuessOral(_props: GuessProps): JSX.Element {
   const highEnoughOral = frenchStore((e) => e.highEnoughOral);
   const currentWord = gameStore((e) => e.currentWord);
-  const { showSuccess, showError } = useNotification();
+  const { showError } = useNotification();
 
   const [lastWord, setLastWord] = useState("");
   const [isListening, setIsListening] = useState(true);
   const [correct, incorrect] = useAssessment();
 
   useEffect(() => {
-    const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;;
+    const SpeechRecognition = window.webkitSpeechRecognition;
     if (!SpeechRecognition) {
       showError("Sorry, your browser does not support speech recognition.");
       return;
@@ -33,12 +33,13 @@ const GuessOral = (props: GuessProps): JSX.Element => {
       setIsListening(false);
     };
 
-    recognition.onresult = (event: SpeechRecognitionResult) => {
-      let interimTranscript = "";
+    recognition.onresult = (event: SpeechRecognitionEvent) => {
+      const interimTranscript = [];
       for (let i = event.resultIndex; i < event.results.length; i++) {
-        const result = event.results[i];
-        const text = result[0].transcript.trim();
+        const result = event.results[i]; // This is of type SpeechRecognitionResult
+        const text = result[0].transcript.trim(); // Access the first alternative
         const confidence = result[0].confidence;
+        interimTranscript.push(text);
         if (result.isFinal) {
           setLastWord(
             `heard: ${text} with ${(confidence * 100).toFixed(2)}% confidence`
@@ -48,12 +49,10 @@ const GuessOral = (props: GuessProps): JSX.Element => {
           } else {
             incorrect();
           }
-        } else {
-          interimTranscript += text;
         }
       }
+      console.info(`Transcript: ${interimTranscript.join("\n")}`);
     };
-
     const startRecognition = () => {
       recognition.start();
     };
@@ -65,11 +64,8 @@ const GuessOral = (props: GuessProps): JSX.Element => {
     startRecognition();
     return () => {
       recognition.onend = null;
-      recognition.stop();
+      stopRecognition();
     };
   }, [isListening]);
-
   return <h3 className={styles.Oral}>{lastWord}</h3>;
-};
-
-export default GuessOral;
+}

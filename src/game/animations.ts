@@ -37,16 +37,18 @@ export const FlipOver = () => {
   }
 };
 
-export const FlipToFront = (resolve: Function) => {
+export const FlipToFront = (resolve: (value: unknown) => void) => {
   const [front, back] = getFaces();
   FlipAroundFromBack(front, back);
 
-  front.addEventListener("webkitTransitionEnd", () => {
-    (front as any).removeEventListener("webkitTransitionEnd", front);
+  // Define the callback function separately
+  const handleTransitionEnd = () => {
+    front.removeEventListener("webkitTransitionEnd", handleTransitionEnd); // Use the same function reference
     resolve("hover");
-  });
-};
+  };
 
+  front.addEventListener("webkitTransitionEnd", handleTransitionEnd);
+};
 export const DragFlipOver = (direction: "horizontal" | "vertical") => {
   const [front, back] = getFaces();
   if (direction === "horizontal") {

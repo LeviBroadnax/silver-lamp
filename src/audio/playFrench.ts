@@ -7,7 +7,7 @@ export const playFrench = (word: IWord) => {
   if (lastWord === word.french) return;
   if (word.tts === "INVALID") return;
   lastWord = word.french;
-  let newUrl =
+  const newUrl =
     word.tts === "MISSING"
       ? `https://d7mj4aqfscim2.cloudfront.net/tts/fr/token/${word.french}`
       : "https://d1vq87e9lcf771.cloudfront.net/" + word.tts;
@@ -16,5 +16,5 @@ export const playFrench = (word: IWord) => {
   audio.loop = false;
   audio.volume = 1;
   audio.src = newUrl;
-  audio.play().catch((e) => {});
+  audio.play().catch((_err) => {});
 };

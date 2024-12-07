@@ -1,9 +1,9 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { frenchStore, gameStore } from "../../store";
 
-import { GuessProps } from "."
-import styles from "./Guess.module.css";
+import { GuessProps } from ".";
 import { useAssessment } from "../../hooks";
+import styles from "./Guess.module.css";
 
 setInterval(() => {
   const input = document.querySelector("input#GuessInput");
@@ -45,8 +45,8 @@ const GuessType = (props: GuessProps) => {
   return (
     <input
       autoFocus
-      id='GuessInput'
-      className={(guess.length === 0) ? styles.hidden : styles.visible}
+      id="GuessInput"
+      className={guess.length === 0 ? styles.hidden : styles.visible}
       value={guess}
       onChange={(ev) => onChange(ev)}
       onKeyDown={(ev) => onKeyDown(ev)}

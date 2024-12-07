@@ -1,5 +1,5 @@
 import { createJSONStorage, persist } from "zustand/middleware";
-import { distance, french, gameStore } from "./index";
+import { distance, french, french100, gameStore } from "./index";
 
 import { create } from "zustand";
 
@@ -18,6 +18,7 @@ interface FrenchState {
 export const frenchStore = create<FrenchState>()(
   persist(
     (set, get) => ({
+      _french: french100,
       _selectedCategories: [],
       _semiRandomIndex: () => {
         const contains = gameStore.getState().seen;
@@ -36,7 +37,7 @@ export const frenchStore = create<FrenchState>()(
       byCategories: (categories) => {
         const result = [];
         for (let i = 0; i < french.length; i++) {
-          for (let c of categories) {
+          for (const c of categories) {
             if (french[i].categories.includes(c)) {
               result.push(i);
               break;

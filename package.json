@@ -3,26 +3,17 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@react-native-async-storage/async-storage": "^1.17.11",
     "canvas-confetti": "^1.6.0",
     "notyf": "^3.10.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-native-async-storage": "^0.0.1",
-    "three": "^0.149.0",
     "zustand": "^4.3.3"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack --config webpack.prod.js",
-    "start": "webpack serve --config webpack.dev.js",
-    "start:prod": "webpack serve --open --config webpack.prod.js"
-  },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
+    "dev": "webpack serve --config webpack.dev.js",
+    "prod": "webpack serve --open --config webpack.prod.js",
+    "lint": "eslint --ext ts,tsx --fix src/"
   },
   "browserslist": {
     "production": [
@@ -32,26 +23,29 @@
     ],
     "development": [
       "last 1 chrome version",
-      "last 1 firefox version",
       "last 1 safari version"
     ]
   },
   "devDependencies": {
     "@types/canvas-confetti": "^1.6.0",
-    "@types/jest": "^29.5.0",
-    "@types/node": "^18.15.3",
     "@types/react": "^18.0.28",
     "@types/react-dom": "^18.0.11",
-    "@types/web": "^0.0.99",
+    "@typescript-eslint/eslint-plugin": "^8.17.0",
+    "@typescript-eslint/parser": "^8.17.0",
+    "brotli-webpack-plugin": "^1.1.0",
     "css-loader": "^6.7.3",
-    "html-webpack-plugin": "^5.5.0",
+    "css-minimizer-webpack-plugin": "^4.2.2",
+    "eslint": "^8.57.0",
+    "eslint-plugin-react": "^7.37.2",
+    "html-webpack-plugin": "^5.6.3",
     "style-loader": "^3.3.2",
+    "terser-webpack-plugin": "^5.3.7",
     "ts-loader": "^9.4.2",
-    "ts-node": "^10.9.1",
     "typescript": "^5.0.2",
     "webpack": "^5.76.2",
     "webpack-cli": "^5.0.1",
     "webpack-dev-server": "^4.13.1",
+    "webpack-hot-middleware": "^2.26.1",
     "webpack-merge": "^5.8.0"
   }
 }

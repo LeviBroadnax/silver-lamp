@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 
 import { frenchStore } from "../store";
 import styles from "./Categories.module.css";
@@ -34,9 +34,9 @@ export default function Categories() {
   if (selectedCategories().length === 0) {
     setSelectedCategories(defaultSelected);
   }
-  const assertSelection = () => {
+  const _assertSelection = () => {
     const currentSelection = byCategories(selectedCategories());
-    for (let opt of options) {
+    for (const opt of options) {
       if (!selectedCategories().includes(opt.value)) {
         const newSelection = byCategories([...selectedCategories(), opt.value]);
         if (newSelection.length === currentSelection.length) {
@@ -77,7 +77,7 @@ export default function Categories() {
     if (isChecked(opt)) {
       return `${styles.Option} ${styles.Selected}`;
     } else {
-      return `${styles.Option}`
+      return `${styles.Option}`;
     }
   };
 
@@ -87,7 +87,8 @@ export default function Categories() {
         <div
           key={opt.display + idx}
           className={getOptionClass(opt)}
-          onClick={(ev) => onClick(ev, opt)}>
+          onClick={(ev) => onClick(ev, opt)}
+        >
           {opt.display}
         </div>
       ))}

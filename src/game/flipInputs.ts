@@ -28,7 +28,7 @@ export const onUserFlip = (
   });
 };
 
-export const onSwipe = (ev: any) => {
+export const onSwipe = (ev: React.TouchEvent) => {
   ev.preventDefault();
   const delta = new Date().getTime() - nextFlip;
   if (delta < 1000) {

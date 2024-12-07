@@ -16,8 +16,8 @@ export const distance = (s1: string, s2: string): number => {
   const s2Matches = new Array(s2.length);
 
   for (i = 0; i < s1.length; i++) {
-    var low = i >= range ? i - range : 0;
-    var high = i + range <= s2.length - 1 ? i + range : s2.length - 1;
+    const low = i >= range ? i - range : 0;
+    const high = i + range <= s2.length - 1 ? i + range : s2.length - 1;
 
     for (j = low; j <= high; j++) {
       if (s1Matches[i] !== true && s2Matches[j] !== true && s1[i] === s2[j]) {

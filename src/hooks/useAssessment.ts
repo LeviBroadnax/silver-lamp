@@ -1,6 +1,6 @@
 import { frenchStore, gameStore } from "../store";
-import { playCorrect, playIncorrect } from "../audio";
-import { useCallback, useState } from "react";
+import { playCorrect as _playCorrect, playIncorrect } from "../audio";
+import { useCallback } from "react";
 
 import Celebrate from "../celebration";
 import { onUserFlip } from "../game/flipInputs";
@@ -15,18 +15,26 @@ export const useAssessment = (): [() => void, () => void] => {
 
   const correct = useCallback(() => {
     Celebrate();
-    onUserFlip(true).then(() => {
-      nextWord();
-      incrementCorrect();
-    });
+    onUserFlip(true)
+      .then(() => {
+        nextWord();
+        incrementCorrect();
+      })
+      .catch((e) => {
+        console.info(e);
+      });
   }, [currentWord()]);
 
   const incorrect = useCallback(() => {
     playIncorrect();
-    onUserFlip(true).then(() => {
-      add(currentWord().rank - 1);
-      nextWord();
-    });
+    onUserFlip(true)
+      .then(() => {
+        add(currentWord().rank - 1);
+        nextWord();
+      })
+      .catch((e) => {
+        console.info(e);
+      });
   }, [currentWord()]);
 
   return [correct, incorrect];

@@ -14,21 +14,21 @@ export const playIncorrect = () => {
 };
 
 const ding = () => {
-  var a;
+  let a;
   (function () {
     a = new Audio("fx/ding.mp3");
   })();
   return a;
 };
 const dash = () => {
-  var a;
+  let a;
   (function () {
     a = new Audio("fx/dash.mp3");
   })();
   return a;
 };
 const dang = () => {
-  var a;
+  let a;
   (function () {
     a = new Audio("fx/dang.mp3");
   })();

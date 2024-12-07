@@ -10,10 +10,10 @@ interface CardProps {
 function Back(props: CardProps): JSX.Element {
   const word = props.word;
   return (
-    <div id="Back" className={`${styles.CardContainer} ${styles.Back}`} >
+    <div id="Back" className={`${styles.CardContainer} ${styles.Back}`}>
       <h1 className={styles.Word}>{word.english}</h1>
       <h1 className={styles.Category}>{word.cat}</h1>
-    </div >
+    </div>
   );
 }
 
@@ -29,17 +29,16 @@ function Front(props: CardProps): JSX.Element {
   );
 }
 
-
 export default function Card(props: CardProps): JSX.Element {
   return (
     <div
       className={styles.CardContainer}
-      onMouseEnter={(ev) => onUserFlip(ev)}
+      onMouseEnter={(ev) => onUserFlip(ev).catch(console.info)}
       onTouchMove={onSwipe}
-      onTouchStart={onSwipe}>
+      onTouchStart={onSwipe}
+    >
       <Front word={props.word} />
       <Back word={props.word} />
     </div>
   );
-
 }
