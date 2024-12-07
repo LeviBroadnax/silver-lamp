@@ -3,9 +3,10 @@ import { distance, gameStore } from "../../store";
 import React from "react";
 import * as styles from "./Example.module.css";
 
-const getTitleText = (word: IWord) => word.exEnglish;
+const getTitleText = (word: IWord) => word?.exEnglish ?? "";
 
 const getText = (word: IWord) => {
+  if (!word) return "";
   const res = word;
   let text = res.exFrench;
   if (text === undefined) return "No french example found";
@@ -17,6 +18,9 @@ const getText = (word: IWord) => {
 };
 
 const getTextSections = (word: IWord) => {
+  if (!word) {
+    return [];
+  }
   const res = word;
   const text = res.exFrench;
   if (text === undefined) return getText(word);
@@ -51,10 +55,7 @@ export default function Example() {
   const sections = getTextSections(word);
   if (sections.length === 3) {
     return (
-      <h4
-        className={styles.Example}
-        title={getTitleText(word)}
-      >
+      <h4 className={styles.Example} title={getTitleText(word)}>
         {sections[0]}
         <span className={styles.Highlight}>{sections[1]}</span>
         {sections[2]}

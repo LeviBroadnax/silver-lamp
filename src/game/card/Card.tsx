@@ -19,6 +19,7 @@ export const Back: React.FC<CardProps> = (props) => {
 
 export const Front: React.FC<CardProps> = (props) => {
   const word = props.word;
+
   return (
     <div id="Front" className={`${styles.CardContainer} ${styles.Front}`}>
       <div className={styles.Rank}>({word.rank})</div>
@@ -37,8 +38,8 @@ const Card: React.FC<CardProps> = (props) => {
       onTouchMove={onSwipe}
       onTouchStart={onSwipe}
     >
-      <Front word={props.word} />
-      <Back word={props.word} />
+      {props.word && <Front word={props.word} />}
+      {props.word && <Back word={props.word} />}
     </div>
   );
 };
