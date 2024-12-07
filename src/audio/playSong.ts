@@ -1,5 +1,5 @@
 let secondsLeft = 0;
-let interval: NodeJS.Timeout;
+let interval: number;
 
 export const playSong = () => {
   const audio = document.querySelector("audio#song") as HTMLAudioElement;

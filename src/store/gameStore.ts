@@ -1,6 +1,5 @@
 import { createJSONStorage, persist } from "zustand/middleware";
-
-import { create } from "zustand";
+import { createWithEqualityFn as create } from "zustand/traditional";
 import { frenchStore } from "./index";
 
 interface GameState {
@@ -44,9 +43,9 @@ export const gameStore = create<GameState>()(
       },
     }),
     {
-      name: "game-store",
-      storage: createJSONStorage(() => sessionStorage),
-      version: 0.06,
+      name: "game-store", // Name for storage key
+      storage: createJSONStorage(() => sessionStorage), // Ensure sessionStorage works properly in v5
+      version: 0.06, // Optional version
     }
   )
 );

@@ -1,7 +1,7 @@
 import React from "react";
 
 import { frenchStore } from "../store";
-import styles from "./Categories.module.css";
+import * as styles from "./Categories.module.css";
 
 interface IOption {
   display: string;
@@ -28,9 +28,12 @@ const options: Array<IOption> = [
 
 const defaultSelected = options.map((e) => e.value);
 export default function Categories() {
-  const [byCategories, setSelectedCategories, selectedCategories] = frenchStore(
-    (e) => [e.byCategories, e.setSelectedCategories, e.selectedCategories]
-  );
+  const { byCategories, setSelectedCategories, selectedCategories } =
+    frenchStore((state) => ({
+      byCategories: state.byCategories,
+      setSelectedCategories: state.setSelectedCategories,
+      selectedCategories: state.selectedCategories,
+    }));
   if (selectedCategories().length === 0) {
     setSelectedCategories(defaultSelected);
   }

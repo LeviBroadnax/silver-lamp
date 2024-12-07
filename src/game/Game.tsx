@@ -7,13 +7,13 @@ import { gameStore } from "../store";
 import Card from "./card/Card";
 import Example from "./example";
 import { onUserFlip } from "./flipInputs";
-import styles from "./Game.module.css";
+import * as styles from "./Game.module.css";
 import Guess from "./guess";
 import Stats from "./stats";
 
 export default function Game() {
   const store = useStore(gameStore);
-  const [word, setWord] = useState<IWord>(store.currentWord());
+  const [word, setWord] = useState<IWord>(() => store.currentWord());
   const { showError } = useNotification();
 
   const [clicked, setClicked] = useState(false);

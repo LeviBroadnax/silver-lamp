@@ -1,7 +1,6 @@
 import { createJSONStorage, persist } from "zustand/middleware";
+import { createWithEqualityFn as create } from "zustand/traditional";
 import { distance, french, french100, gameStore } from "./index";
-
-import { create } from "zustand";
 
 interface FrenchState {
   _selectedCategories: string[];
@@ -73,9 +72,9 @@ export const frenchStore = create<FrenchState>()(
       },
     }),
     {
-      name: "french-store",
-      storage: createJSONStorage(() => sessionStorage),
-      version: 0.06,
+      name: "french-store", // Name for storage key
+      storage: createJSONStorage(() => sessionStorage), // Ensure sessionStorage works properly in v5
+      version: 0.07, // Optional version
     }
   )
 );

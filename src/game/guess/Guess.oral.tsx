@@ -3,9 +3,9 @@ import { useAssessment, useNotification } from "../../hooks";
 import { frenchStore, gameStore } from "../../store";
 
 import { GuessProps } from ".";
-import styles from "./Guess.module.css";
+import * as styles from "./Guess.module.css";
 
-export default function GuessOral(_props: GuessProps): JSX.Element {
+const GuessOral: React.FC<GuessProps> = (_props) => {
   const highEnoughOral = frenchStore((e) => e.highEnoughOral);
   const currentWord = gameStore((e) => e.currentWord);
   const { showError } = useNotification();
@@ -67,5 +67,7 @@ export default function GuessOral(_props: GuessProps): JSX.Element {
       stopRecognition();
     };
   }, [isListening]);
-  return <h3 className={styles.Oral}>{lastWord}</h3>;
-}
+  return <h3 className={styles.oral}>{lastWord}</h3>;
+};
+
+export default GuessOral;

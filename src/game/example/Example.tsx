@@ -1,7 +1,7 @@
 import { distance, gameStore } from "../../store";
 
 import React from "react";
-import styles from "./Example.module.css";
+import * as styles from "./Example.module.css";
 
 const getTitleText = (word: IWord) => word.exEnglish;
 

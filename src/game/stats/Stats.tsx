@@ -1,6 +1,6 @@
 import React from "react";
 import { gameStore } from "../../store";
-import styles from "./Stats.module.css";
+import * as styles from "./Stats.module.css";
 
 export default function Stats() {
   const successRate = gameStore((e) => e.successRate);

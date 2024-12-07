@@ -3,6 +3,8 @@ import { GuessProps } from ".";
 import GuessOral from "./Guess.oral";
 import GuessType from "./Guess.type";
 
-export default function Guess(props: GuessProps): JSX.Element {
+const Guess: React.FC<GuessProps> = (props) => {
   return props.isOral ? <GuessOral {...props} /> : <GuessType {...props} />;
-}
+};
+
+export default Guess;

@@ -3,7 +3,7 @@ import { frenchStore, gameStore } from "../../store";
 
 import { GuessProps } from ".";
 import { useAssessment } from "../../hooks";
-import styles from "./Guess.module.css";
+import * as styles from "./Guess.module.css";
 
 setInterval(() => {
   const input = document.querySelector("input#GuessInput");
