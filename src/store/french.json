@@ -1,1056 +1,5 @@
 [
   {
-    "cat": "det, pro",
-    "categories": ["determiner", "pronoun"],
-    "english": "the, him, her, it, them",
-    "exEnglish": "long live politics, long live love",
-    "exFrench": "vive la politique, vive l'amour",
-    "french": "le",
-    "rank": 1,
-    "tts": "zarifr/dd939831d1d9ed07c8dbcddd47b7c3dd"
-  },
-  {
-    "cat": "det, prep",
-    "categories": ["determiner", "preposition"],
-    "english": "of, from, some, any",
-    "exEnglish": "he only dreams of money and pleasure",
-    "exFrench": "il ne rêve que d'argent et de plaisirs",
-    "french": "de",
-    "rank": 2,
-    "tts": "zarifr/4b9770425e754723dbb90ce2cb538f7a"
-  },
-  {
-    "cat": "adj, det, nm, pro",
-    "categories": ["adjective", "determiner", "noun", "masculine", "pronoun"],
-    "english": "a, an, one",
-    "exEnglish": "I broke one of my fingernails",
-    "exFrench": "je me suis cassé un ongle",
-    "french": "un",
-    "rank": 3,
-    "tts": "zarifr/f7d488f61674f95c969732a70d2dbaf2"
-  },
-  {
-    "cat": "prep",
-    "categories": ["preposition"],
-    "english": "to, at, in",
-    "exEnglish": "they remain at school as long as possible",
-    "exFrench": "ils restent à l'école le plus longtemps possible",
-    "french": "à",
-    "rank": 4,
-    "tts": "zarifr/2481c97764f70649e50f6fb462e98098"
-  },
-  {
-    "cat": "nm,v",
-    "categories": ["noun", "masculine", "verb"],
-    "english": "to be, being",
-    "exEnglish": "everybody wants to be beautiful",
-    "exFrench": "tout le monde veut être beau",
-    "french": "être",
-    "rank": 5,
-    "tts": "zarifr/7e1ab4d35da5261264fb14b75eeaf02a"
-  },
-  {
-    "cat": "conj",
-    "categories": ["conjunction"],
-    "english": "and",
-    "exEnglish": "and the tears started flowing again",
-    "exFrench": "et les larmes se remirent à couler",
-    "french": "et",
-    "rank": 6,
-    "tts": "zarifr/7ca1eb4d3b7769e8c7511f2068445ef7"
-  },
-  {
-    "cat": "adv,prep,pro",
-    "categories": ["adverb", "preposition", "pronoun"],
-    "english": "in, by",
-    "exEnglish": "I returned to Spain in September",
-    "exFrench": "je suis retournée en Espagne en septembre",
-    "french": "en",
-    "rank": 7,
-    "tts": "zarifr/0930871b0b03828c1930909750262b45"
-  },
-  {
-    "cat": "nm,v",
-    "categories": ["noun", "masculine", "verb"],
-    "english": "to have",
-    "exEnglish": "there were six of us so you can't have a conversation",
-    "exFrench": "on était six donc tu peux pas avoir une conversation",
-    "french": "avoir",
-    "rank": 8,
-    "tts": "zarifr/545a260b6c098406f7a416a3c74a1f02"
-  },
-  {
-    "cat": "adv,conj,pro",
-    "categories": ["adverb", "conjunction", "pronoun"],
-    "english": "that, which, who, whom",
-    "exEnglish": "it's a soldier. but what's he doing here?",
-    "exFrench": "c'est un soldat. mais que fait-il ici?",
-    "french": "que",
-    "rank": 9,
-    "tts": "zarifr/a68ee26339fa05ac73747e705f1f88a8"
-  },
-  {
-    "cat": "prep",
-    "categories": ["preposition"],
-    "english": "for, in order to",
-    "exEnglish": "she played to win",
-    "exFrench": "elle jouait pour gagner",
-    "french": "pour",
-    "rank": 10,
-    "tts": "zarifr/fe4fc961a095e383d83064a44e7378c3"
-  },
-  {
-    "cat": "prep",
-    "categories": ["preposition"],
-    "english": "in, into, from",
-    "exEnglish": "I will return in 10 minutes",
-    "exFrench": "je reviendrai dans dix minutes",
-    "french": "dans",
-    "rank": 11,
-    "tts": "zarifr/281a6060ec0cab084a36ba6e651fd02d"
-  },
-  {
-    "cat": "det,pro",
-    "categories": ["determiner", "pronoun"],
-    "english": "this, that",
-    "exEnglish": "I do not detest this man",
-    "exFrench": "je ne déteste pas cet homme",
-    "french": "ce",
-    "rank": 12,
-    "tts": "zarifr/82ad202ab435ce740f4a9d7c34950a13"
-  },
-  {
-    "cat": "pro",
-    "categories": ["pronoun"],
-    "english": "he, it",
-    "exEnglish": "go see if he is injured",
-    "exFrench": "allez voir s'il est blessé",
-    "french": "il",
-    "rank": 13,
-    "tts": "zarifr/e1363486618a2005e4ff3705daf53d4e"
-  },
-  {
-    "cat": "pro",
-    "categories": ["pronoun"],
-    "english": "who, whom",
-    "exEnglish": "I don't know who to talk to",
-    "exFrench": "je ne sais pas à qui m'adresser",
-    "french": "qui",
-    "rank": 14,
-    "tts": "zarifr/b426db959484a38fbac9ba32372cd2f1"
-  },
-  {
-    "cat": "adv",
-    "categories": ["adverb"],
-    "english": "not",
-    "exEnglish": "we are not doing very good work",
-    "exFrench": "nous ne faisons pas du très bon travail",
-    "french": "ne",
-    "rank": 15,
-    "tts": "zarifr/a1a06adfaa985581e283cde0b798c29b"
-  },
-  {
-    "cat": "adj,prep",
-    "categories": ["adjective", "preposition"],
-    "english": "on, upon",
-    "exEnglish": "you had one chance in a million",
-    "exFrench": "t'avais une chance sur un million",
-    "french": "sur",
-    "rank": 16,
-    "tts": "zarifr/af240ed3950fe3e2b20cd491adf59dca"
-  },
-  {
-    "cat": "pro",
-    "categories": ["pronoun"],
-    "english": "oneself, himself, herself, itself, themselves",
-    "exEnglish": "with this treaty, Japan brings itself closer to the U.S.",
-    "exFrench": "avec ce traité, le Japon se rapproche des Etats-Unis",
-    "french": "se",
-    "rank": 17,
-    "tts": "zarifr/4a76f90bb78dca4c60152a46f148c3e5"
-  },
-  {
-    "cat": "adv,nm(pl)",
-    "categories": [
-      "adverb",
-      "noun",
-      "masculine",
-      "plural",
-      "no distinct plural"
-    ],
-    "english": "not, n't, footstep",
-    "exEnglish": "no, don't touch it!",
-    "exFrench": "non, ne touchez pas!",
-    "french": "pas",
-    "rank": 18,
-    "tts": "zarifr/ae6ea25e2c3df79746965143a43fcf9a"
-  },
-  {
-    "cat": "adv",
-    "categories": ["adverb"],
-    "english": "more, no more",
-    "exEnglish": "he's considerably younger than I am",
-    "exFrench": "il est considérablement plus jeune que moi",
-    "french": "plus",
-    "rank": 19,
-    "tts": "zarifr/74cef6bba6c48beee1bdd4916a304450"
-  },
-  {
-    "cat": "nm,v",
-    "categories": ["noun", "masculine", "verb"],
-    "english": "can, to be able to",
-    "exEnglish": "before this law, women could not vote.",
-    "exFrench": "Avant cette loi, les femmes ne pouvaient pas voter.",
-    "french": "pouvoir",
-    "rank": 20,
-    "tts": "juniorfr/9d398f439eb2484bcdf9be9d71de3f0b"
-  },
-  {
-    "cat": "prep",
-    "categories": ["preposition"],
-    "english": "by",
-    "exEnglish": "he found himself there by accident",
-    "exFrench": "il s'y trouvait par hasard",
-    "french": "par",
-    "rank": 21,
-    "tts": "zarifr/f8b7b8ec458be05e064b351bfee09055"
-  },
-  {
-    "cat": "pro",
-    "categories": ["pronoun"],
-    "english": "I",
-    "exEnglish": "I am happy to see you again",
-    "exFrench": "je suis contente de vous revoir",
-    "french": "je",
-    "rank": 22,
-    "tts": "zarifr/c23403fcb3f69a8187036f05e187ea78"
-  },
-  {
-    "cat": "prep",
-    "categories": ["preposition"],
-    "english": "with",
-    "exEnglish": "do you want to go to a movie with me?",
-    "exFrench": "vous voulez aller au ciné avec moi?",
-    "french": "avec",
-    "rank": 23,
-    "tts": "zarifr/f7f5cdd1c67051175fdcba5f00805be2"
-  },
-  {
-    "cat": "adv,det,nadj,pro",
-    "categories": ["adverb", "determiner", "noun", "pronoun"],
-    "english": "all, very",
-    "exEnglish": "as you see, everything is clean",
-    "exFrench": "comme vous voyez, tout est propre",
-    "french": "tout",
-    "rank": 24,
-    "tts": "zarifr/b95faf8e01bf3a831d329ca61438ee5e"
-  },
-  {
-    "cat": "nm,v",
-    "categories": ["noun", "masculine", "verb"],
-    "english": "to do, to make",
-    "exEnglish": "what's he doing?",
-    "exFrench": "qu'est-ce qu'il fait?",
-    "french": "faire",
-    "rank": 25,
-    "tts": "zarifr/2e0b2d2018e964f529c6328d9253d7a3"
-  },
-  {
-    "cat": "det,nm",
-    "categories": ["determiner", "noun", "masculine"],
-    "english": "his, her, its, sound, bran",
-    "exEnglish": "a sound engineer friend of mine helped me with the arrangements",
-    "exFrench": "un ami ingénieur du son m'aide pour les arrangements",
-    "french": "son",
-    "rank": 26,
-    "tts": "zarifr/764ca8b55001125b534229a8fb16a229"
-  },
-  {
-    "cat": "v",
-    "categories": ["verb"],
-    "english": "to put, to place",
-    "exEnglish": "may I sit at your table?",
-    "exFrench": "je peux me mettre à votre table?",
-    "french": "mettre",
-    "rank": 27,
-    "tts": "beafr/d15976988a09826800d47bf01e17c7d5"
-  },
-  {
-    "cat": "det,nadj(f),pro",
-    "categories": [
-      "determiner",
-      "adjective",
-      "noun",
-      "feminine",
-      "no distinct feminine",
-      "pronoun"
-    ],
-    "english": "other",
-    "exEnglish": "there's another problem",
-    "exFrench": "il y a un autre problème",
-    "french": "autre",
-    "rank": 28,
-    "tts": "lilyfr/91f08a7dddb64cd23ef638f423240790"
-  },
-  {
-    "cat": "pro",
-    "categories": ["pronoun"],
-    "english": "one, we",
-    "exEnglish": "we shoot first and ask questions later",
-    "exFrench": "on tire et on pose les questions ensuite",
-    "french": "on",
-    "rank": 29,
-    "tts": "zarifr/536aa8e4a5c6ea009dc7f61ce72fc70b"
-  },
-  {
-    "cat": "adv,conj,intj",
-    "categories": ["adverb", "conjunction", "interjection"],
-    "english": "but",
-    "exEnglish": "I'm not rich, but I know the truth",
-    "exFrench": "je ne suis pas riche, mais je connais la vérité",
-    "french": "mais",
-    "rank": 30,
-    "tts": "zarifr/0bb5bd478d52400c54d67474a5dbebd7"
-  },
-  {
-    "cat": "pro",
-    "categories": ["pronoun"],
-    "english": "we, us",
-    "exEnglish": "we must defend ourselves",
-    "exFrench": "nous devons nous défendre nous-mêmes",
-    "french": "nous",
-    "rank": 31,
-    "tts": "zarifr/b6edb6227d88f27f2136455c46a9aa76"
-  },
-  {
-    "cat": "adv,conj",
-    "categories": ["adverb", "conjunction"],
-    "english": "like, as",
-    "exEnglish": "Tony and I, we're like brothers",
-    "exFrench": "Tony et moi, on est comme des frères",
-    "french": "comme",
-    "rank": 32,
-    "tts": "zarifr/614f9d8079bdd9bc83cc224386162347"
-  },
-  {
-    "cat": "conj",
-    "categories": ["conjunction"],
-    "english": "or",
-    "exEnglish": "is there some coffee left or not?",
-    "exFrench": "il en reste du café ou pas?",
-    "french": "ou",
-    "rank": 33,
-    "tts": "zarifr/7378e1dbf10ac1db154afff343999350"
-  },
-  {
-    "cat": "adv,conj,nmi",
-    "categories": ["adverb", "conjunction", "noun", "invariable", "masculine"],
-    "english": "if, whether",
-    "exEnglish": "today our economy is going so poorly",
-    "exFrench": "aujourd'hui, notre économie va si mal",
-    "french": "si",
-    "rank": 34,
-    "tts": "zarifr/224d4842f7eb968e03fd1da3493c6196"
-  },
-  {
-    "cat": "det,adj(f),pro",
-    "categories": [
-      "determiner",
-      "adjective",
-      "feminine",
-      "no distinct feminine",
-      "pronoun"
-    ],
-    "english": "them, their, theirs",
-    "exEnglish": "solar energy assured their survival",
-    "exFrench": "l'énergie solaire assurait leur survie",
-    "french": "leur",
-    "rank": 35,
-    "tts": "zarifr/1c5e38a829670f175d3fc7fb1c3293fd"
-  },
-  {
-    "cat": "adv,nmi,pro",
-    "categories": ["adverb", "noun", "invariable", "masculine", "pronoun"],
-    "english": "there",
-    "exEnglish": "it's for certain that we'll be going there",
-    "exFrench": "c'est certain qu'on va y aller",
-    "french": "y",
-    "rank": 36,
-    "tts": "zarifr/416a6b14e1be37dab9dd078cd0afc3c8"
-  },
-  {
-    "cat": "nm,v",
-    "categories": ["noun", "masculine", "verb"],
-    "english": "to say",
-    "exEnglish": "I picked up the telephone receiver without saying anything to anyone",
-    "exFrench": "je décrochais le téléphone sans rien dire à personne",
-    "french": "dire",
-    "rank": 37,
-    "tts": "zarifr/d16e752f99306f2ae8c013583f47b89d"
-  },
-  {
-    "cat": "pro",
-    "categories": ["pronoun"],
-    "english": "she, her",
-    "exEnglish": "I was head-over-heels in love. she loved me a lot",
-    "exFrench": "j'étais fou amoureux. elle m'aimait bien",
-    "french": "elle",
-    "rank": 38,
-    "tts": "zarifr/e524d83870220275082015701353854d"
-  },
-  {
-    "cat": "nm,v",
-    "categories": ["noun", "masculine", "verb"],
-    "english": "to have to, owe, duty",
-    "exEnglish": "I must work without the least bit of hindrance",
-    "exFrench": "je dois travailler sans la moindre entrave",
-    "french": "devoir",
-    "rank": 39,
-    "tts": "vikramfr/e63c4cc02997fd9319150b0dd37a1e0c"
-  },
-  {
-    "cat": "adji,adv,nm,prep",
-    "categories": [
-      "adjective",
-      "invariable",
-      "adverb",
-      "noun",
-      "masculine",
-      "preposition"
-    ],
-    "english": "before",
-    "exEnglish": "you're going to lean forward",
-    "exFrench": "tu vas te pencher en avant",
-    "french": "avant",
-    "rank": 40,
-    "tts": "zarifr/5d9835973062cf0c2d1225f2607d15a6"
-  },
-  {
-    "cat": "det,nmi",
-    "categories": ["determiner", "noun", "invariable", "masculine"],
-    "english": "2, two",
-    "exEnglish": "he takes the train on business twice per week",
-    "exFrench": "il prend le train deux fois par semaine pour affaires",
-    "french": "deux",
-    "rank": 41,
-    "tts": "zarifr/1d27f3314580b12e704f24be09978359"
-  },
-  {
-    "cat": "adj(f),adv,pro",
-    "categories": [
-      "adjective",
-      "feminine",
-      "no distinct feminine",
-      "adverb",
-      "pronoun"
-    ],
-    "english": "same, even, self",
-    "exEnglish": "they don't even excuse themselves",
-    "exFrench": "ils ne s'excusent même pas",
-    "french": "même",
-    "rank": 42,
-    "tts": "zarifr/1406ee68c77b21c2932a217a0d942b79"
-  },
-  {
-    "cat": "v",
-    "categories": ["verb"],
-    "english": "to take",
-    "exEnglish": "she took him by the hand",
-    "exFrench": "elle lui prit la main",
-    "french": "prendre",
-    "rank": 43,
-    "tts": "zarifr/6fa26355e6e4da82d88694af239e34b7"
-  },
-  {
-    "cat": "adv,conj",
-    "categories": ["adverb", "conjunction"],
-    "english": "too, also, as",
-    "exEnglish": "I also dreamed of traveling a lot",
-    "exFrench": "je rêvais aussi de beaucoup voyager",
-    "french": "aussi",
-    "rank": 44,
-    "tts": "zarifr/df4429df0bf206d49b79f16367c7a564"
-  },
-  {
-    "cat": "pro",
-    "categories": ["pronoun"],
-    "english": "that, the one, he, him",
-    "exEnglish": "you're the one I respect the most",
-    "exFrench": "tu es celui que je respecte le plus",
-    "french": "celui",
-    "rank": 45,
-    "tts": "lucyfr/f38007efee8b1e2b15930be9b3c517c5"
-  },
-  {
-    "cat": "v",
-    "categories": ["verb"],
-    "english": "to give",
-    "exEnglish": "I would have given my life for him",
-    "exFrench": "j'aurais donné ma vie pour lui",
-    "french": "donner",
-    "rank": 46,
-    "tts": "beafr/44a357cbed971d112b24d1563b5a030b"
-  },
-  {
-    "cat": "adj",
-    "categories": ["adjective"],
-    "english": "well",
-    "exEnglish": "everything's going well now",
-    "exFrench": "tout va bien maintenant",
-    "french": "bien",
-    "rank": 47,
-    "tts": "zarifr/1cb8fd0a04e53383dde882e978d7eafe"
-  },
-  {
-    "cat": "adv,pro",
-    "categories": ["adverb", "pronoun"],
-    "english": "where",
-    "exEnglish": "they aren't saying where he lives",
-    "exFrench": "on ne dit pas où il vit",
-    "french": "où",
-    "rank": 48,
-    "tts": "zarifr/75cc737e04ad4931b125498852c28132"
-  },
-  {
-    "cat": "nf(pl)",
-    "categories": ["noun", "feminine", "plural", "no distinct plural"],
-    "english": "time, times",
-    "exEnglish": "raise your hand one time",
-    "exFrench": "lève la main une fois",
-    "french": "fois",
-    "rank": 49,
-    "tts": "zarifr/2fb1663257b25dd5cb24987231716d5b"
-  },
-  {
-    "cat": "pro",
-    "categories": ["pronoun"],
-    "english": "you",
-    "exEnglish": "here, you are a public personality",
-    "exFrench": "ici, vous avez une personnalité publique",
-    "french": "vous",
-    "rank": 50,
-    "tts": "zarifr/6a004bd6dc570cae5801d1acaecdf871"
-  },
-  {
-    "cat": "adv",
-    "categories": ["adverb"],
-    "english": "again, yet",
-    "exEnglish": "you lied once again to your wife",
-    "exFrench": "tu as encore menti à ta femme",
-    "french": "encore",
-    "rank": 51,
-    "tts": "zarifr/4086faae6df2e5a5b96acc5887595a9c"
-  },
-  {
-    "cat": "adj,nm",
-    "categories": ["adjective", "noun", "masculine"],
-    "english": "new",
-    "exEnglish": "he made a new life for himself here",
-    "exFrench": "il a construit une nouvelle vie ici",
-    "french": "nouveau",
-    "rank": 52,
-    "tts": "lilyfr/586acd070a29c1bb3cf97a0ee0ef4b91"
-  },
-  {
-    "cat": "nm,v",
-    "categories": ["noun", "masculine", "verb"],
-    "english": "to go",
-    "exEnglish": "you should go to bed, you look wiped out",
-    "exFrench": "tu devrais aller te coucher, tu as l'air vanné",
-    "french": "aller",
-    "rank": 53,
-    "tts": "zarifr/2ce8c6b2d3134ae95505e2b53ec9e486"
-  },
-  {
-    "cat": "pro",
-    "categories": ["pronoun"],
-    "english": "that, it",
-    "exEnglish": "that requires integrity and courage",
-    "exFrench": "cela demande de l'intégrité et du courage",
-    "french": "cela",
-    "rank": 54,
-    "tts": "beafr/09e95f04555fa9dae1cfae3e278186a3"
-  },
-  {
-    "cat": "prep",
-    "categories": ["preposition"],
-    "english": "between",
-    "exEnglish": "I'm walking between the houses",
-    "exFrench": "je marche entre les maisons",
-    "french": "entre",
-    "rank": 55,
-    "tts": "zarifr/69f66e57377b5286007c6be895aaf311"
-  },
-  {
-    "cat": "det,nadj",
-    "categories": ["determiner", "noun"],
-    "english": "first",
-    "exEnglish": "is she the first wife, the second one?",
-    "exFrench": "est-elle la première épouse, la deuxième?",
-    "french": "premier",
-    "rank": 56,
-    "tts": "lucyfr/9178bb76639557fee4051c5ae6a0026f"
-  },
-  {
-    "cat": "nm,v",
-    "categories": ["noun", "masculine", "verb"],
-    "english": "to want",
-    "exEnglish": "do as you like; i don't have an opinion.",
-    "exFrench": "Faites comme vous voulez, je n'ai pas d'avis.",
-    "french": "vouloir",
-    "rank": 57,
-    "tts": "falstafffr/3ac08780c4d5d2d4fd49539bf327c213"
-  },
-  {
-    "cat": "adv",
-    "categories": ["adverb"],
-    "english": "already",
-    "exEnglish": "the streets were already full of people",
-    "exFrench": "les rues étaient déjà pleines de monde",
-    "french": "déjà",
-    "rank": 58,
-    "tts": "zarifr/b5826f0898c953745bac91a4d463c9e0"
-  },
-  {
-    "cat": "adv,nadj",
-    "categories": ["adverb", "noun"],
-    "english": "great, big, tall",
-    "exEnglish": "you're taller than I thought",
-    "exFrench": "tu es plus grand que je pensais",
-    "french": "grand",
-    "rank": 59,
-    "tts": "zarifr/40600ac9a4fc12a46f66f9ad58986383"
-  },
-  {
-    "cat": "det",
-    "categories": ["determiner"],
-    "english": "my",
-    "exEnglish": "you could've met my buddy",
-    "exFrench": "t'aurais pu rencontrer mon copain",
-    "french": "mon",
-    "rank": 60,
-    "tts": "zarifr/2a0cf98fea16eae0a27d58a160671927"
-  },
-  {
-    "cat": "pro",
-    "categories": ["pronoun"],
-    "english": "me, to me, myself",
-    "exEnglish": "come back to see me in five or six years",
-    "exFrench": "reviens me voir dans cinq ou six ans",
-    "french": "me",
-    "rank": 61,
-    "tts": "zarifr/f98899c5260d8caa1d28201e02dcbe1d"
-  },
-  {
-    "cat": "adji(pl),adv,nm(pl),prep",
-    "categories": [
-      "adjective",
-      "invariable",
-      "adverb",
-      "noun",
-      "masculine",
-      "plural",
-      "no distinct plural",
-      "preposition"
-    ],
-    "english": "less",
-    "exEnglish": "he had even less excuses than his accomplices did",
-    "exFrench": "il avait moins d'excuses encore que ses complices",
-    "french": "moins",
-    "rank": 62,
-    "tts": "lilyfr/1f29f6d8561f09f289ce1d09b8338222"
-  },
-  {
-    "cat": "det,adj,pro",
-    "categories": ["determiner", "adjective", "pronoun"],
-    "english": "none, either, neither, not any",
-    "exEnglish": "too much money and no taste",
-    "exFrench": "trop d'argent et aucun goût",
-    "french": "aucun",
-    "rank": 63,
-    "tts": "zarifr/0a0a01526e49d5c26745508d323483f1"
-  },
-  {
-    "cat": "pro",
-    "categories": ["pronoun"],
-    "english": "him, her",
-    "exEnglish": "but I have confidence in him",
-    "exFrench": "mais j'ai confiance qu'en lui",
-    "french": "lui",
-    "rank": 64,
-    "tts": "zarifr/7a2302787b013ebd4563a58698490486"
-  },
-  {
-    "cat": "nm(pl)",
-    "categories": ["noun", "masculine", "plural", "no distinct plural"],
-    "english": "time",
-    "exEnglish": "on the spiritual level, time does not exist",
-    "exFrench": "sur le plan spirituel, le temps n'existe pas",
-    "french": "temps",
-    "rank": 65,
-    "tts": "zarifr/53968d769dd1e7252101f0ebb0fd0c90"
-  },
-  {
-    "cat": "adv",
-    "categories": ["adverb"],
-    "english": "very",
-    "exEnglish": "was I good? very, very good",
-    "exFrench": "j'ai été bonne? très, très bonne",
-    "french": "très",
-    "rank": 66,
-    "tts": "zarifr/de6b6a536c0699d0e492f66f5cf55903"
-  },
-  {
-    "cat": "nm,v",
-    "categories": ["noun", "masculine", "verb"],
-    "english": "to know",
-    "exEnglish": "I didn't know what to say any more",
-    "exFrench": "je ne savais plus quoi dire",
-    "french": "savoir",
-    "rank": 67,
-    "tts": "lucyfr/b0b2568d59000035a69a79e5377d9d72"
-  },
-  {
-    "cat": "v",
-    "categories": ["verb"],
-    "english": "to take, to require, to need",
-    "exEnglish": "there's no need to be a racist, at all",
-    "exFrench": "il ne faut pas être raciste, point",
-    "french": "falloir",
-    "rank": 68,
-    "tts": "beafr/82975d939da862619d6f56ef0710fb34"
-  },
-  {
-    "cat": "v",
-    "categories": ["verb"],
-    "english": "to see",
-    "exEnglish": "I just wanted to see you to say ... good luck",
-    "exFrench": "je tenais seulement à te voir pour te dire ... bonne chance",
-    "french": "voir",
-    "rank": 69,
-    "tts": "zarifr/80148781a1e1ef7c7222acf829aa1647"
-  },
-  {
-    "cat": "adv,adj,det",
-    "categories": ["adverb", "adjective", "determiner"],
-    "english": "some",
-    "exEnglish": "he will stay for a few months",
-    "exFrench": "il restera pour quelques mois",
-    "french": "quelque",
-    "rank": 70,
-    "tts": "zarifr/80377d2f901a70b5884f225d6d8c8881"
-  },
-  {
-    "cat": "prep",
-    "categories": ["preposition"],
-    "english": "without",
-    "exEnglish": "I look younger without makeup",
-    "exFrench": "je fais plus jeune sans maquillage",
-    "french": "sans",
-    "rank": 71,
-    "tts": "zarifr/e4449d9219a576d614fdd65177ed1ef1"
-  },
-  {
-    "cat": "nf",
-    "categories": ["noun", "feminine"],
-    "english": "reason",
-    "exEnglish": "she's right, you know",
-    "exFrench": "elle a raison, tu sais",
-    "french": "raison",
-    "rank": 72,
-    "tts": "lilyfr/fc0f84feb9f409d915d76aa19db9ecfc"
-  },
-  {
-    "cat": "det",
-    "categories": ["determiner"],
-    "english": "our",
-    "exEnglish": "our city has a sense of community",
-    "exFrench": "notre ville a le sens de la communauté",
-    "french": "notre",
-    "rank": 73,
-    "tts": "zarifr/88f7778c935468a1fe5821b007058bff"
-  },
-  {
-    "cat": "pro",
-    "categories": ["pronoun"],
-    "english": "whose, of which",
-    "exEnglish": "everything you dreamed about is available in town",
-    "exFrench": "on a tout ce dont tu rêvais en ville",
-    "french": "dont",
-    "rank": 74,
-    "tts": "zarifr/04f63ec2f6a58c41c4d0d0129f3cd10e"
-  },
-  {
-    "cat": "adv,nmi",
-    "categories": ["adverb", "noun", "invariable", "masculine"],
-    "english": "no, not",
-    "exEnglish": "no, I can't talk now",
-    "exFrench": "non, je ne peux pas parler maintenant",
-    "french": "non",
-    "rank": 75,
-    "tts": "zarifr/507411216a157c8270f3734f914f8a76"
-  },
-  {
-    "cat": "nm",
-    "categories": ["noun", "masculine"],
-    "english": "year",
-    "exEnglish": "I was one year old when my father died",
-    "exFrench": "j'avais un an à la mort de mon père",
-    "french": "an",
-    "rank": 76,
-    "tts": "zarifr/48bee06ea7960de882bc6ac102a10820"
-  },
-  {
-    "cat": "nm",
-    "categories": ["noun", "masculine"],
-    "english": "world, people",
-    "exEnglish": "our ultimate goal is to remake the world",
-    "exFrench": "notre ultime but est de reconstruire le monde",
-    "french": "monde",
-    "rank": 77,
-    "tts": "zarifr/c4c21f308b09bfd31f0eafec8fbd4ea6"
-  },
-  {
-    "cat": "nm",
-    "categories": ["noun", "masculine"],
-    "english": "day",
-    "exEnglish": "one day, I would find my real parents",
-    "exFrench": "un jour, je retrouverais mes vrais parents",
-    "french": "jour",
-    "rank": 78,
-    "tts": "zarifr/ff407dbe14c3f74b0542775394992059"
-  },
-  {
-    "cat": "nm",
-    "categories": ["noun", "masculine"],
-    "english": "mister, sir, gentleman",
-    "exEnglish": "how are you, sir?",
-    "exFrench": "comment allez-vous , monsieur?",
-    "french": "monsieur",
-    "rank": 79,
-    "tts": "lucyfr/56b7564996579392bd36b855ff6969a1"
-  },
-  {
-    "cat": "v",
-    "categories": ["verb"],
-    "english": "to ask for",
-    "exEnglish": "I would like to ask you to do something for me",
-    "exFrench": "j'ai un service à vous demander",
-    "french": "demander",
-    "rank": 80,
-    "tts": "vikramfr/c5d5c43ea30bbd95d9603e92b214ed16"
-  },
-  {
-    "cat": "adv",
-    "categories": ["adverb"],
-    "english": "then, so",
-    "exEnglish": "so? when are you coming back ?",
-    "exFrench": "et alors? vous revenez quand?",
-    "french": "alors",
-    "rank": 81,
-    "tts": "zarifr/64ebb010d36ebec98e84482d1226709d"
-  },
-  {
-    "cat": "adv,prep",
-    "categories": ["adverb", "preposition"],
-    "english": "after",
-    "exEnglish": "he shortly thereafter succumbed to his wounds",
-    "exFrench": "il a succombé à ses blessures peu après",
-    "french": "après",
-    "rank": 82,
-    "tts": "zarifr/b5b43e24bb20d5370b46e1863c0dffa1"
-  },
-  {
-    "cat": "v",
-    "categories": ["verb"],
-    "english": "to find",
-    "exEnglish": "I found some blood. on the front seat",
-    "exFrench": "j'ai trouvé du sang. sur le siège avant",
-    "french": "trouver",
-    "rank": 83,
-    "tts": "lilyfr/84d128eb2d407213a9f92d3428bcc923"
-  },
-  {
-    "cat": "nf,pro",
-    "categories": ["noun", "feminine", "pronoun"],
-    "english": "person, people, anybody, anyone, nobody",
-    "exEnglish": "he was speaking to nobody in particular",
-    "exFrench": "il ne parlait à personne en particulier",
-    "french": "personne",
-    "rank": 84,
-    "tts": "zarifr/1734d1d821f53dff6b33d34b17ce910e"
-  },
-  {
-    "cat": "v",
-    "categories": ["verb"],
-    "english": "to render, to return, to yield, to give up",
-    "exEnglish": "I went there at 4 o'clock in the morning",
-    "exFrench": "je m'y rendis à 4 heures du matin",
-    "french": "rendre",
-    "rank": 85,
-    "tts": "beafr/728b94bc129e9d70279fedf593c16342"
-  },
-  {
-    "cat": "nf",
-    "categories": ["noun", "feminine"],
-    "english": "share",
-    "exEnglish": "I want to share some data with you",
-    "exFrench": "je voudrais vous faire part de quelques données",
-    "french": "part",
-    "rank": 86,
-    "tts": "zarifr/b7ebe17b13885a729e932d51b3d69641"
-  },
-  {
-    "cat": "nadj",
-    "categories": ["noun"],
-    "english": "last",
-    "exEnglish": "that's the last place you should have met",
-    "exFrench": "c'est le dernier endroit où vous auriez dû vous rencontrer",
-    "french": "dernier",
-    "rank": 87,
-    "tts": "lilyfr/99bae4c63844c9108c3edd9a9888da94"
-  },
-  {
-    "cat": "v",
-    "categories": ["verb"],
-    "english": "to come",
-    "exEnglish": "come meet the others",
-    "exFrench": "venez rencontrer les autres",
-    "french": "venir",
-    "rank": 88,
-    "tts": "zarifr/40cfe6313a6c75d846634e6f367c847c"
-  },
-  {
-    "cat": "adj,prep,nm",
-    "categories": ["adjective", "preposition", "noun", "masculine"],
-    "english": "during, pendant",
-    "exEnglish": "where were you all of this time?",
-    "exFrench": "où t'étais pendant tout ce temps?",
-    "french": "pendant",
-    "rank": 89,
-    "tts": "zarifr/d043e355f222a3816a6c880403a589aa"
-  },
-  {
-    "cat": "v",
-    "categories": ["verb"],
-    "english": "to pass",
-    "exEnglish": "we went past the front of my grandmother's place",
-    "exFrench": "nous sommes passées devant la maison de ma grand-mère",
-    "french": "passer",
-    "rank": 90,
-    "tts": "zarifr/d136eb8a26c0e0ee1f4c7c9d6b1f4cba"
-  },
-  {
-    "cat": "adv",
-    "categories": ["adverb"],
-    "english": "little",
-    "exEnglish": "a secret unfolds little by little",
-    "exFrench": "un secret se dévoile peu à peu",
-    "french": "peu",
-    "rank": 91,
-    "tts": "zarifr/9a5bbbc5d058f10704b35112f9c51d4a"
-  },
-  {
-    "cat": "pro",
-    "categories": ["pronoun"],
-    "english": "who, whom, which",
-    "exEnglish": "there are many points on which I would like to comment",
-    "exFrench": "il y a bien des points sur lesquels je voudrais faire des commentaires",
-    "french": "lequel",
-    "rank": 92,
-    "tts": "danielle/669c8e1729a77e76e05aa6b228eeb5e9"
-  },
-  {
-    "cat": "nf",
-    "categories": ["noun", "feminine"],
-    "english": "result, follow-up, rest",
-    "exEnglish": "two, three, and so on",
-    "exFrench": "deux, trois et ainsi de suite",
-    "french": "suite",
-    "rank": 93,
-    "tts": "eddyfr/8f86352a529f520995e33669765ebda2"
-  },
-  {
-    "cat": "adj,adv,intj,nm",
-    "categories": ["adjective", "adverb", "interjection", "noun", "masculine"],
-    "english": "good",
-    "exEnglish": "it's not a good time",
-    "exFrench": "ce n'est pas le bon moment",
-    "french": "bon",
-    "rank": 94,
-    "tts": "zarifr/4ac6505a76a8cf0bca9d87fe6e38086d"
-  },
-  {
-    "cat": "v",
-    "categories": ["verb"],
-    "english": "to understand",
-    "exEnglish": "I understand that you're upset",
-    "exFrench": "je comprends que vous soyez fâché",
-    "french": "comprendre",
-    "rank": 95,
-    "tts": "zarifr/65fe853693a623c9eacfd379ee833663"
-  },
-  {
-    "cat": "adv,prep",
-    "categories": ["adverb", "preposition"],
-    "english": "since, for",
-    "exEnglish": "I have known him since high school",
-    "exFrench": "je le connais depuis le lycée",
-    "french": "depuis",
-    "rank": 96,
-    "tts": "lilyfr/f07b840a7aeefce8590e4475a767d6a4"
-  },
-  {
-    "cat": "adv,nm",
-    "categories": ["adverb", "noun", "masculine"],
-    "english": "point, at all",
-    "exEnglish": "I'm in agreement with that point of view",
-    "exFrench": "je suis d'accord avec ce point de vue",
-    "french": "point",
-    "rank": 97,
-    "tts": "lilyfr/ebba89262eb9575c33f789f48fbe3def"
-  },
-  {
-    "cat": "adv",
-    "categories": ["adverb"],
-    "english": "thus",
-    "exEnglish": "what drives him to act that way?",
-    "exFrench": "qu'est-ce qui le pousse à agir ainsi?",
-    "tts": "MISSING",
-    "french": "ainsi",
-    "rank": 98
-  },
-  {
-    "cat": "nf",
-    "categories": ["noun", "feminine"],
-    "english": "hour",
-    "exEnglish": "at what time did they leave?",
-    "exFrench": "a quelle heure sont-ils partis?",
-    "french": "heure",
-    "rank": 99,
-    "tts": "zarifr/aaaa1587a5b2e4c5ed93d1706d9a9ed1"
-  },
-  {
-    "cat": "v",
-    "categories": ["verb"],
-    "english": "to stay",
-    "exEnglish": "in the remaining time, find a solution",
-    "exFrench": "le temps qu'il te reste, trouve une solution",
-    "french": "rester",
-    "rank": 100,
-    "tts": "lucyfr/02622494b7cc7bc51e8157a4d1871be9"
-  },
-  {
-    "cat": "adj",
-    "categories": ["adjective"],
-    "english": "alone, only",
-    "exEnglish": "talking to oneself was a sign of loneliness",
-    "exFrench": "parler tout seul était signe d'aliénation",
-    "french": "seul",
-    "rank": 101,
-    "tts": "zarifr/92d50a49045858ace504528f73e7bb48"
-  },
-  {
     "cat": "nf",
     "categories": ["noun", "feminine"],
     "english": "year",
@@ -3825,7 +2774,8 @@
     "cat": "nadj",
     "categories": ["noun"],
     "english": "American",
-    "ex": "c'est la voie que les Américains ont choisie --it's the path that the Americans have chosen",
+    "exFrench": "c'est la voie que les Américains ont choisie",
+    "exEnglish": "it's the path that the Americans have chosen",
     "french": "américain",
     "rank": 374,
     "tts": "zarifr/25c184b04e254c833d581488842cc961"
@@ -4036,7 +2986,7 @@
     "english": "to judge",
     "exEnglish": "it's not my place to judge that",
     "exFrench": "ce n'est pas à moi de juger ça",
-    "tts": "https://d1vq87e9lcf771.cloudfront.net/zarifr/457db6c136de663660a5cc03ed0797e9",
+    "tts": "zarifr/457db6c136de663660a5cc03ed0797e9",
     "french": "juger",
     "rank": 395
   },
@@ -5316,7 +4266,7 @@
     "english": "to announce",
     "exEnglish": "1993 is hence showing to be a difficult year",
     "exFrench": "l'année 1993 s'annonce donc difficile",
-    "tts": "https://d1vq87e9lcf771.cloudfront.net/zarifr/d01d4cc5db0f30a70b13657434e6c667",
+    "tts": "zarifr/d01d4cc5db0f30a70b13657434e6c667",
     "french": "annoncer",
     "rank": 521
   },
@@ -5384,7 +4334,8 @@
     "cat": "conj",
     "categories": ["conjunction"],
     "english": "since",
-    "ex": "je ne lui répondais pas puisque j'étais muet --I didn't answer him since I was a mute",
+    "exFrench": "je ne lui répondais pas puisque j'étais muet",
+    "exEnglish": "I didn't answer him since I was a mute",
     "french": "puisque",
     "rank": 528,
     "tts": "zarifr/e6a441f4bc0531dff36507d4a82b3ee0"
@@ -7952,7 +6903,7 @@
     "english": "intention",
     "exEnglish": "I did it with the best intentions",
     "exFrench": "je l'ai fait avec les meilleures intentions",
-    "tts": "https://d1vq87e9lcf771.cloudfront.net/beafr/23998bf2cdd524525568edc980e0ca76",
+    "tts": "beafr/23998bf2cdd524525568edc980e0ca76",
     "french": "intention",
     "rank": 782
   },
@@ -8551,7 +7502,7 @@
     "english": "to imagine",
     "exEnglish": "I imagine she has the documents",
     "exFrench": "j'imagine qu'elle a des documents",
-    "tts": "https://d1vq87e9lcf771.cloudfront.net/victor/2237b12810f64555e1d2b6941914b7ed",
+    "tts": "victor/2237b12810f64555e1d2b6941914b7ed",
     "french": "imaginer",
     "rank": 840
   },
@@ -8641,7 +7592,7 @@
     "english": "to charge, to load",
     "exEnglish": "the tree collapsed under the weight",
     "exFrench": "l'arbre plie sous la charge",
-    "tts": "https://d1vq87e9lcf771.cloudfront.net/juniorfr/055a36d5f4fc7610b8dfeabf51da224a",
+    "tts": "juniorfr/055a36d5f4fc7610b8dfeabf51da224a",
     "french": "charge",
     "rank": 849
   },
@@ -8749,8 +7700,7 @@
     "cat": "nf",
     "categories": ["noun", "feminine"],
     "english": "zone, area",
-    "exEnglish": "I've secured the area",
-    "exEnglishFrench": "you can come here",
+    "exEnglish": "you can come here, I've secured the area",
     "exFrench": "vous pouvez venir, j'ai sécurisé la zone",
     "tts": "MISSING",
     "french": "zone",
@@ -9430,7 +8380,7 @@
     "cat": "v",
     "categories": ["verb"],
     "english": "to destroy",
-    "englishFrench": "to destroy l'environnement a été entièrement détruit",
+    "exFrench": "to destroy l'environnement a été entièrement détruit",
     "exEnglish": "the environment was completely destroyed",
     "tts": "MISSING",
     "french": "détruire",
@@ -9672,7 +8622,7 @@
     "english": "expression",
     "exEnglish": "this expression has an extremely simple meaning",
     "exFrench": "cette expression a un sens extrêmement simple",
-    "tts": "https://d1vq87e9lcf771.cloudfront.net/victor/e1392cb99490351cc61fb918d48e19be",
+    "tts": "victor/e1392cb99490351cc61fb918d48e19be",
     "french": "expression",
     "rank": 952
   },
@@ -9682,7 +8632,7 @@
     "english": "protection",
     "exEnglish": "they wanted to create marine conservation areas",
     "exFrench": "on voudrait créer des aires de protection marines",
-    "tts": "https://d1vq87e9lcf771.cloudfront.net/victor/a9e2de9248db9ff21153466225e6dc9b",
+    "tts": "victor/a9e2de9248db9ff21153466225e6dc9b",
     "french": "protection",
     "rank": 953
   },
@@ -10302,7 +9252,7 @@
     "english": "salary, wage",
     "exEnglish": "many workers earn minimum wage",
     "exFrench": "beaucoup de travailleurs gagnent le salaire minimum",
-    "tts": "https://d1vq87e9lcf771.cloudfront.net/lilyfr/709500beacd8674269f3a8ef1d777db0",
+    "tts": "lilyfr/709500beacd8674269f3a8ef1d777db0",
     "french": "salaire",
     "rank": 1015
   },
@@ -11368,7 +10318,7 @@
     "english": "following",
     "exEnglish": "in the 20 days that followed, they starve to death",
     "exFrench": "les 20 jours suivants, ils meurent de faim",
-    "tts": "https://d1vq87e9lcf771.cloudfront.net/lilyfr/381048058d4dd3f680399b94ad086e83",
+    "tts": "lilyfr/381048058d4dd3f680399b94ad086e83",
     "french": "suivant",
     "rank": 1121
   },
@@ -11690,7 +10640,7 @@
     "english": "to distribute, to give out",
     "exEnglish": "these values are distributed along a bell curve",
     "exFrench": "ces valeurs se distribuent selon une courbe en cloche",
-    "tts": "https://d1vq87e9lcf771.cloudfront.net/linfr/cd0157b516f7abcbef7e0f5ed86fe9ae",
+    "tts": "linfr/cd0157b516f7abcbef7e0f5ed86fe9ae",
     "french": "distribuer",
     "rank": 1152
   },
@@ -11920,7 +10870,7 @@
     "english": "deep",
     "exEnglish": "the sky was a dark blue",
     "exFrench": "le ciel était d'un bleu profond",
-    "tts": "https://d1vq87e9lcf771.cloudfront.net/vikramfr/8a9a5d4b1db9e99ff809de39a8fe2faf",
+    "tts": "vikramfr/8a9a5d4b1db9e99ff809de39a8fe2faf",
     "french": "profond",
     "rank": 1175
   },
@@ -12745,7 +11695,7 @@
     "cat": "nm",
     "categories": ["noun", "masculine"],
     "english": "Palestinian, Israeli",
-    "englishFrench": "Palestinian les mères palestiniennes veulent que leurs enfants grandissent dans la paix",
+    "exFrench": "Palestinian les mères palestiniennes veulent que leurs enfants grandissent dans la paix",
     "exEnglish": "Palestinian mothers want their children to grow up in peace",
     "tts": "MISSING",
     "french": "palestinien",
@@ -13085,7 +12035,7 @@
     "cat": "adj",
     "categories": ["adjective"],
     "english": "fundamental",
-    "englishFrench": "fundamental je fais une distinction fondamentale",
+    "exFrench": "fundamental je fais une distinction fondamentale",
     "exEnglish": "I'm making a fundamental distinction",
     "tts": "MISSING",
     "french": "fondamental",
@@ -13387,7 +12337,7 @@
     "english": "light",
     "exEnglish": "with airy steps she left the library",
     "exFrench": "d'un pas léger elle sortit de la bibliothèque",
-    "tts": "https://d1vq87e9lcf771.cloudfront.net/oscarfr/ad1e6a1894b890ed0f04cf197cbbc270",
+    "tts": "oscarfr/ad1e6a1894b890ed0f04cf197cbbc270",
     "french": "léger",
     "rank": 1321
   },
@@ -14517,7 +13467,7 @@
     "english": "to encourage",
     "exEnglish": "go encourage our little guy",
     "exFrench": "allez, encouragez notre petit gars",
-    "tts": "https://d1vq87e9lcf771.cloudfront.net/victor/2852b6152809b4e1eeb6daab6a5822aa",
+    "tts": "victor/2852b6152809b4e1eeb6daab6a5822aa",
     "french": "encourager",
     "rank": 1434
   },
@@ -15954,11 +14904,11 @@
   {
     "cat": "nadj(f)",
     "categories": ["adjective", "noun", "feminine", "no distinct feminine"],
-    "englishFrench": "Catholic ma sœur était une fervente catholique",
+    "exFrench": "Catholic ma sœur était une fervente catholique",
     "exEnglish": "my sister was a devout Catholic",
     "french": "catholique",
     "tts": "MISSING",
-    "noun": "Catholic",
+    "english": "Catholic",
     "rank": 1578
   },
   {
@@ -15967,7 +14917,7 @@
     "english": "home, hearth",
     "exEnglish": "each of them had a home",
     "exFrench": "ils ont eu chacun un foyer",
-    "tts": "https://d1vq87e9lcf771.cloudfront.net/juniorfr/bd9dd281b864fa5f04c538c056bef8d3",
+    "tts": "juniorfr/bd9dd281b864fa5f04c538c056bef8d3",
     "french": "foyer",
     "rank": 1579
   },
@@ -15995,8 +14945,7 @@
     "cat": "nm",
     "categories": ["noun", "masculine"],
     "english": "job, occupation, trade",
-    "exEnglish": "it's a profession",
-    "exEnglishFrench": "it's more than a job",
+    "exEnglish": "it's more than a job, it's a profession",
     "exFrench": "c'est déjà plus qu'un métier, c'est une profession",
     "french": "métier",
     "rank": 1582,
@@ -16475,7 +15424,7 @@
     "english": "above, on top",
     "exEnglish": "I'm putting my feet on top of it",
     "exFrench": "je mets mes pieds dessus",
-    "tts": "https://d1vq87e9lcf771.cloudfront.net/linfr/423ec0b583c35777af8ccca34961e577",
+    "tts": "linfr/423ec0b583c35777af8ccca34961e577",
     "french": "dessus",
     "rank": 1629
   },
@@ -17125,7 +16074,7 @@
     "english": "accent",
     "exEnglish": "her accent is so cute",
     "exFrench": "son accent est tellement mignon",
-    "tts": "https://d1vq87e9lcf771.cloudfront.net/vikramfr/69a151315acc588cef982fc6ef8857d4",
+    "tts": "vikramfr/69a151315acc588cef982fc6ef8857d4",
     "french": "accent",
     "rank": 1694
   },
@@ -17515,7 +16464,7 @@
     "english": "severe",
     "exEnglish": "they are strictly, meticulously controlled",
     "exFrench": "ils sont contrôlés de façon sévère, de façon méticuleuse",
-    "tts": "https://d1vq87e9lcf771.cloudfront.net/juniorfr/2728fe2b32f55db4f80e6f2267784734",
+    "tts": "juniorfr/2728fe2b32f55db4f80e6f2267784734",
     "french": "sévère",
     "rank": 1733
   },
@@ -18281,7 +17230,7 @@
     "english": "administrative",
     "exEnglish": "I currently hold an administrative position",
     "exFrench": "j'occupe actuellement un poste administratif",
-    "tts": "https://d1vq87e9lcf771.cloudfront.net/juniorfr/131c4fc22ef297963aa0afb72d3e66d1",
+    "tts": "juniorfr/131c4fc22ef297963aa0afb72d3e66d1",
     "french": "administratif",
     "rank": 1809
   },
@@ -18339,8 +17288,7 @@
     "cat": "nf",
     "categories": ["noun", "feminine"],
     "english": "surprise",
-    "exEnglish": "that was a nice surprise",
-    "exEnglishFrench": "I was rather pleased",
+    "exEnglish": "that was a nice surprise, I was rather pleased",
     "exFrench": "j'étais plutôt content, c'était la bonne surprise",
     "french": "surprise",
     "rank": 1815,
@@ -18392,7 +17340,7 @@
     "english": "to sing",
     "exEnglish": "he sang the melody",
     "exFrench": "il chantait la mélodie",
-    "tts": "https://d1vq87e9lcf771.cloudfront.net/danielle/0b133e900e15bd0d1200f1b9afa152b0",
+    "tts": "danielle/0b133e900e15bd0d1200f1b9afa152b0",
     "french": "chanter",
     "rank": 1820
   },
@@ -18952,7 +17900,7 @@
     "english": "mayor",
     "exEnglish": "he filled three terms as mayor",
     "exFrench": "il a fait 3 mandats comme maire",
-    "tts": "https://d1vq87e9lcf771.cloudfront.net/victor/6369d7702b0992fbd2d6f64cc4849452",
+    "tts": "victor/6369d7702b0992fbd2d6f64cc4849452",
     "french": "maire",
     "rank": 1876
   },
@@ -19002,7 +17950,7 @@
     "english": "till, cash desk",
     "exEnglish": "you must go to the cashier!",
     "exFrench": "tu vas passer à la caisse!",
-    "tts": "https://d1vq87e9lcf771.cloudfront.net/eddyfr/891ff6d6d9a0134676479020bd9ff151",
+    "tts": "eddyfr/891ff6d6d9a0134676479020bd9ff151",
     "french": "caisse",
     "rank": 1881
   },
@@ -19140,7 +18088,7 @@
     "cat": "nadj",
     "categories": ["noun"],
     "english": "Christian",
-    "englishFrench": "Christian la moitié des habitants sont de confession chrétienne",
+    "exFrench": "Christian la moitié des habitants sont de confession chrétienne",
     "exEnglish": "half of the inhabitants are Christians",
     "tts": "MISSING",
     "french": "chrétien",
@@ -19270,7 +18218,7 @@
     "cat": "adj",
     "categories": ["adjective"],
     "english": "governmental",
-    "englishFrench": "governmental on va alléger l'appareil gouvernemental",
+    "exFrench": "governmental on va alléger l'appareil gouvernemental",
     "exEnglish": "we're going to lighten the governmental apparatus",
     "tts": "MISSING",
     "french": "gouvernemental",
@@ -19692,7 +18640,7 @@
     "english": "to shout, to scream, to cry out",
     "exEnglish": "they're dying. they cry out for help",
     "exFrench": "ils se meurent. ils crient au secours",
-    "tts": "https://d1vq87e9lcf771.cloudfront.net/zarifr/a909d8568ab1fc651243e98ded3dc5f6",
+    "tts": "zarifr/a909d8568ab1fc651243e98ded3dc5f6",
     "french": "crier",
     "rank": 1950
   },
@@ -20272,7 +19220,7 @@
     "english": "to guide",
     "exEnglish": "these are the convictions that guide my footsteps",
     "exFrench": "voilà les convictions qui guident mes pas",
-    "tts": "https://d1vq87e9lcf771.cloudfront.net/danielle/15a2c9ce14113dd9f5e7cf54da7fee0f",
+    "tts": "danielle/15a2c9ce14113dd9f5e7cf54da7fee0f",
     "french": "guider",
     "rank": 2008
   },
@@ -20662,7 +19610,7 @@
     "english": "to light up",
     "exEnglish": "you're here so that I can enlighten you",
     "exFrench": "vous êtes là pour que je vous éclaire",
-    "tts": "https://d1vq87e9lcf771.cloudfront.net/zarifr/2d1c2e9c3b51f87e7c5bd5b116c2a256",
+    "tts": "zarifr/2d1c2e9c3b51f87e7c5bd5b116c2a256",
     "french": "éclairer",
     "rank": 2047
   },
@@ -21844,7 +20792,7 @@
     "english": "rumour",
     "exEnglish": "after years of rumors, the scandal broke",
     "exFrench": "après plusieurs années de rumeurs, le scandale a éclaté",
-    "tts": "https://d1vq87e9lcf771.cloudfront.net/falstafffr/115923967971d819640ad44a569b7cb1",
+    "tts": "falstafffr/115923967971d819640ad44a569b7cb1",
     "french": "rumeur",
     "rank": 2164
   },
@@ -22280,7 +21228,7 @@
     "english": "childhood",
     "exEnglish": "since early childhood I have been dreaming of this day",
     "exFrench": "depuis ma tendre enfance, je rêve de ce jour",
-    "tts": "https://d1vq87e9lcf771.cloudfront.net/falstafffr/295129496702ab6b8d252da967c329b9",
+    "tts": "falstafffr/295129496702ab6b8d252da967c329b9",
     "french": "enfance",
     "rank": 2207
   },
@@ -22610,7 +21558,7 @@
     "english": "planned",
     "exEnglish": "the currently planned period is 92 years",
     "exFrench": "la période actuelle prévue est de 92 ans",
-    "tts": "https://d1vq87e9lcf771.cloudfront.net/beafr/8d9181a985270d9f66726b6b0bffdc8e",
+    "tts": "beafr/8d9181a985270d9f66726b6b0bffdc8e",
     "french": "prévu",
     "rank": 2240
   },
@@ -22658,7 +21606,7 @@
     "cat": "nadj",
     "categories": ["noun"],
     "english": "Muslim",
-    "englishFrench": "Muslim, Moslem il y a plein de femmes musulmanes qui ont écrit des livres",
+    "exFrench": "Muslim, Moslem il y a plein de femmes musulmanes qui ont écrit des livres",
     "exEnglish": "many Muslim women have written books",
     "tts": "MISSING",
     "french": "musulman",
@@ -22860,7 +21808,7 @@
     "english": "necessary, required",
     "exEnglish": "you're not obligated to respond to me",
     "exFrench": "vous n'êtes pas obligés de me donner une réponse",
-    "tts": "https://d1vq87e9lcf771.cloudfront.net/eddyfr/78b94209f4388b3229b5fee0eb256f5d",
+    "tts": "eddyfr/78b94209f4388b3229b5fee0eb256f5d",
     "french": "obligé",
     "rank": 2265
   },
@@ -23350,7 +22298,7 @@
     "english": "decree, order",
     "exEnglish": "this decree will go into effect on May 1",
     "exFrench": "cet arrêté prend effet à compter du 1 mai prochain",
-    "tts": "https://d1vq87e9lcf771.cloudfront.net/danielle/aabc017d95f14cf61e2d325245849c42",
+    "tts": "danielle/aabc017d95f14cf61e2d325245849c42",
     "french": "arrêté",
     "rank": 2314
   },
@@ -25704,7 +24652,7 @@
     "cat": "nadj",
     "categories": ["noun"],
     "english": "Parisian",
-    "englishFrench": "Parisian ils vivent en France, banlieue parisienne",
+    "exFrench": "Parisian ils vivent en France, banlieue parisienne",
     "exEnglish": "they live in France, in the Paris suburbs",
     "tts": "MISSING",
     "french": "parisien",
@@ -25766,7 +24714,7 @@
     "english": "quiet",
     "exEnglish": "leave it alone, settle down",
     "exFrench": "laisse-le tranquille, reste tranquille",
-    "tts": "https://d1vq87e9lcf771.cloudfront.net/lilyfr/09d008373ccc04852bb1c9533bfcc1c8",
+    "tts": "lilyfr/09d008373ccc04852bb1c9533bfcc1c8",
     "french": "tranquille",
     "rank": 2555
   },
@@ -26132,7 +25080,7 @@
     "english": "animal, beast, stupid",
     "exEnglish": "let this little critter alone",
     "exFrench": "laissez cette petite bête tranquille",
-    "tts": "https://d1vq87e9lcf771.cloudfront.net/linfr/6d78ca01661ace9ac30f8a7a7ba13abd",
+    "tts": "linfr/6d78ca01661ace9ac30f8a7a7ba13abd",
     "french": "bête",
     "rank": 2591
   },
@@ -26929,7 +25877,7 @@
     "english": "sports, athletic, competitive",
     "exEnglish": "he's young and athletic",
     "exFrench": "il est jeune et sportif",
-    "tts": "https://d1vq87e9lcf771.cloudfront.net/eddyfr/6cf942c61ce73324a4d3101a5fddfe92",
+    "tts": "eddyfr/6cf942c61ce73324a4d3101a5fddfe92",
     "french": "sportif",
     "rank": 2670
   },
@@ -28039,7 +26987,7 @@
     "english": "biological, nature",
     "exEnglish": "studies on biological effects of radiation have been rare",
     "exFrench": "les études sur les effets biologiques des radiations sont restées rares",
-    "tts": "https://d1vq87e9lcf771.cloudfront.net/vikramfr/20b9592722cf9c31e48a5918b87ca53c",
+    "tts": "vikramfr/20b9592722cf9c31e48a5918b87ca53c",
     "french": "biologique",
     "rank": 2781
   },
@@ -28377,7 +27325,7 @@
     "cat": "nf",
     "categories": ["noun", "feminine"],
     "english": "compensation, clearing",
-    "englishFrench": "compensation, clearing nous avons offert une compensation aux provinces qui ont perdu de l'argent",
+    "exFrench": "compensation, clearing nous avons offert une compensation aux provinces qui ont perdu de l'argent",
     "exEnglish": "we offered compensation to the provinces that lost money",
     "tts": "MISSING",
     "french": "compensation",
@@ -30319,7 +29267,7 @@
     "english": "luxury",
     "exEnglish": "anger is a luxury I can't afford",
     "exFrench": "la colère est un luxe que je ne peux me permettre",
-    "tts": "https://d1vq87e9lcf771.cloudfront.net/victor/f1fb1d0fc4366723b9d8f370c3eb4000",
+    "tts": "victor/f1fb1d0fc4366723b9d8f370c3eb4000",
     "french": "luxe",
     "rank": 3009
   },
@@ -32176,7 +31124,7 @@
     "english": "to justify, to account for, to motivate",
     "exEnglish": "what motivated you to write this book?",
     "exFrench": "qu'est-ce qui vous a motivé à écrire ce livre?",
-    "tts": "https://d1vq87e9lcf771.cloudfront.net/victor/a342b2019ec58f7e73bb7956f475b4ea",
+    "tts": "victor/a342b2019ec58f7e73bb7956f475b4ea",
     "french": "motiver",
     "rank": 3194
   },
@@ -34094,7 +33042,8 @@
     "cat": "nm",
     "categories": ["noun", "masculine"],
     "english": "tunnel",
-    "ex": "ils entreprennent de creuser un tunnel - they undertake the digging of a tunnel",
+    "exFrench": "ils entreprennent de creuser un tunnel",
+    "exEnglish": "they undertake the digging of a tunnel",
     "tts": "MISSING",
     "french": "tunnel",
     "rank": 3386
@@ -34493,7 +33442,8 @@
     "cat": "nf",
     "categories": ["noun", "feminine"],
     "english": "grave, tomb",
-    "ex": "je jure ... sur la tombe de ma grand-mère - I swear ... on my grandmother's grave",
+    "exEnglish": "je jure ... sur la tombe de ma grand-mère",
+    "exFrench": "I swear ... on my grandmother's grave",
     "french": "tombe",
     "rank": 3426,
     "tts": "juniorfr/2a4bde4285300168bb99035cd58f91e3"
@@ -34522,7 +33472,8 @@
     "cat": "nm",
     "categories": ["noun", "masculine"],
     "english": "block",
-    "ex": "il a pour résultat de supprimer le blocage - as a result it removes the blockage",
+    "exFrench": "il a pour résultat de supprimer le blocage",
+    "exEnglish": "as a result it removes the blockage",
     "tts": "MISSING",
     "french": "blocage",
     "rank": 3429
@@ -34561,7 +33512,8 @@
     "cat": "nadj",
     "categories": ["noun"],
     "english": "eternal, everlasting",
-    "ex": "je ferai de Rome une merveille éternelle - I will make Rome an eternal wonder",
+    "exEnglish": "I will make Rome an eternal wonder",
+    "exFrench": "je ferai de Rome une merveille éternelle",
     "tts": "MISSING",
     "french": "éternel",
     "rank": 3433
@@ -34630,7 +33582,8 @@
     "cat": "v",
     "categories": ["verb"],
     "english": "to infer, to induce, to result in , to lead to",
-    "ex": "je ne veux pas vous induire en erreur - I don't want to lead you into error",
+    "exFrench": "je ne veux pas vous induire en erreur",
+    "exEnglish": "I don't want to lead you into error",
     "tts": "MISSING",
     "french": "induire",
     "rank": 3440
@@ -35009,7 +33962,8 @@
     "cat": "adj(pl)",
     "categories": ["adjective", "plural", "no distinct plural"],
     "english": "scandalous, outrageous",
-    "ex": "le coût des études est devenu scandaleux-- the cost of an education has become scandalous",
+    "exFrench": "le coût des études est devenu scandaleux",
+    "exEnglish": "the cost of an education has become scandalous",
     "tts": "MISSING",
     "french": "scandaleux",
     "rank": 3478
@@ -35308,9 +34262,8 @@
     "cat": "nadj(pl)",
     "categories": ["adjective", "noun", "plural", "no distinct plural"],
     "english": "hollow, empty, hole",
-    "exEnglish": "in the off hours--during the night, for example",
-    "exEnglishFrench": "durant la nuit, par exemple",
-    "exFrench": "aux heures creuses",
+    "exEnglish": "in the off hours -- during the night, for example",
+    "exFrench": "aux heures creuses -- durant la nuit, par exemple",
     "tts": "MISSING",
     "french": "creux",
     "rank": 3508
@@ -35321,7 +34274,7 @@
     "english": "delivery",
     "exEnglish": "delivery of the ship is slated for April",
     "exFrench": "la livraison du navire est prévue en avril",
-    "tts": "https://d1vq87e9lcf771.cloudfront.net/falstafffr/995f161e4bacde79b3ee4a3933e98e9b",
+    "tts": "falstafffr/995f161e4bacde79b3ee4a3933e98e9b",
     "french": "livraison",
     "rank": 3509
   },
@@ -37752,7 +36705,7 @@
     "english": "to decline, to refuse, to turn down",
     "exEnglish": "you have declined our offer",
     "exFrench": "vous avez décliné notre offre",
-    "tts": "MISSING",
+    "tts": "INVALID",
     "french": "décliner",
     "rank": 3751
   },
@@ -37850,8 +36803,7 @@
     "cat": "adj(pl)",
     "categories": ["adjective", "plural", "no distinct plural"],
     "english": "confused, embarrassed",
-    "exEnglish": "I don't know why",
-    "exEnglishFrench": "I'm very confused",
+    "exEnglish": "I'm very confused, I don't know why",
     "exFrench": "je suis très confus, je ne sais pas pourquoi",
     "tts": "MISSING",
     "french": "confus",
@@ -39403,7 +38355,7 @@
     "english": "wheel",
     "exEnglish": "inch slowly forward, I said. the wheels began turning",
     "exFrench": "avance doucement, dis-je. les roues se mirent à tourner",
-    "tts": "https://d1vq87e9lcf771.cloudfront.net/oscarfr/dcfd0d8b412049137354a2262c50d72e",
+    "tts": "oscarfr/dcfd0d8b412049137354a2262c50d72e",
     "french": "roue",
     "rank": 3916
   },
@@ -39897,9 +38849,8 @@
     "cat": "adv",
     "categories": ["adverb"],
     "english": "underneath",
-    "exEnglish": "40",
-    "exEnglishFrench": "the temperature is falling below",
-    "exFrench": "la température descend au-dessous de -40",
+    "exEnglish": "the temperature is falling below 40",
+    "exFrench": "la température descend au-dessous de 40",
     "tts": "MISSING",
     "french": "au-dessous",
     "rank": 3965
@@ -40956,8 +39907,7 @@
     "cat": "nm",
     "categories": ["noun", "masculine"],
     "english": "oath, vow",
-    "exEnglish": "it's sacred",
-    "exEnglishFrench": "you can't break an oath",
+    "exEnglish": "you can't break an oath, it's sacred",
     "exFrench": "tu ne peux pas rompre un serment, c'est sacré",
     "tts": "MISSING",
     "french": "serment",
@@ -42049,7 +40999,7 @@
     "english": "typical",
     "exEnglish": "it's typical. that doesn't surprise me",
     "exFrench": "c'est typique. cela ne m'étonne pas",
-    "tts": "https://d1vq87e9lcf771.cloudfront.net/eddyfr/beafe76c2fd120305e9495a4dce801d4",
+    "tts": "eddyfr/beafe76c2fd120305e9495a4dce801d4",
     "french": "typique",
     "rank": 4178
   },
@@ -43641,7 +42591,7 @@
     "english": "tent",
     "exEnglish": "Fabrice and I were sharing the same tent",
     "exFrench": "Fabrice et moi partagions la même tente",
-    "tts": "https://d1vq87e9lcf771.cloudfront.net/oscarfr/7cedb3589a818f3e825e0a70039d424a",
+    "tts": "oscarfr/7cedb3589a818f3e825e0a70039d424a",
     "french": "tente",
     "rank": 4336
   },
@@ -45274,9 +44224,10 @@
   {
     "cat": "nadj",
     "categories": ["noun"],
-    "englishFrench": "come le moment venu, on allumera le phare de la liberté",
+    "exFrench": "come le moment venu, on allumera le phare de la liberté",
     "exEnglish": "when the time comes, we will light the flame of liberty",
     "french": "venu",
+    "english": "come",
     "rank": 4499,
     "tts": "falstafffr/0d450688bbe9140388ecfdbf1b89f9c7"
   },
@@ -45726,7 +44677,7 @@
     "english": "underground, underground passage",
     "exEnglish": "they discovered an underground corridor",
     "exFrench": "ils découvraient un corridor souterrain",
-    "tts": "MISSING",
+    "tts": "INVALID",
     "french": "souterrain",
     "rank": 4544
   },
@@ -47756,7 +46707,7 @@
     "english": "elegant, stylish",
     "exEnglish": "the poor are henceforth more elegant than the rich",
     "exFrench": "les pauvres sont désormais plus élégants que les riches",
-    "tts": "https://d1vq87e9lcf771.cloudfront.net/beafr/ba74cd3061bfa97acb7945cc832b954a",
+    "tts": "beafr/ba74cd3061bfa97acb7945cc832b954a",
     "french": "élégant",
     "rank": 4747
   },
@@ -48046,7 +46997,7 @@
     "english": "trunk, boot, chest",
     "exEnglish": "the suitcases are in the trunk",
     "exFrench": "les bagages sont dans le coffre",
-    "tts": "https://d1vq87e9lcf771.cloudfront.net/vikramfr/10576f8d3ce46105ca39d7382f6e16b4",
+    "tts": "vikramfr/10576f8d3ce46105ca39d7382f6e16b4",
     "french": "coffre",
     "rank": 4776
   },
@@ -48433,7 +47384,7 @@
     "english": "shuttle",
     "exEnglish": "the airport shuttles? they're here",
     "exFrench": "les navettes pour l'aéroport? elles sont là",
-    "tts": "https://d1vq87e9lcf771.cloudfront.net/eddyfr/400fe9da0c25753bb881c071d2f9812d",
+    "tts": "eddyfr/400fe9da0c25753bb881c071d2f9812d",
     "french": "navette",
     "rank": 4814
   },
@@ -50259,7 +49210,7 @@
     "english": "thoughtful, well thought out",
     "exEnglish": "we should act in a thoughtful and responsible manner",
     "exFrench": "nous devrions agir de façon réfléchie et responsable",
-    "tts": "https://d1vq87e9lcf771.cloudfront.net/oscarfr/3256bf440e2598fab398f2a4f59ce3ce",
+    "tts": "oscarfr/3256bf440e2598fab398f2a4f59ce3ce",
     "french": "réfléchi",
     "rank": 4996
   },

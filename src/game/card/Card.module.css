@@ -1,0 +1,80 @@
+.CardContainer {
+  display: flex;
+  color: #282c34;
+  width: 50vw;
+  width: 50svw;
+  height: 50vh;
+  height: 50svh;
+  position: absolute;
+  border-radius: 15%;
+  transition: transform 0.438s ease-in;
+}
+
+.Front {
+  border-top-right-radius: 0%;
+  border-bottom-left-radius: 0%;
+  background-color: aliceblue;
+  visibility: visible;
+  backface-visibility: hidden;
+  transform: rotateY(0deg);
+  background: var(--french-colors);
+}
+
+.Back {
+  border-top-left-radius: 0%;
+  border-bottom-right-radius: 0%;
+  transform: rotateY(180deg);
+  backface-visibility: hidden;
+  background: var(--english-colors);
+}
+
+.Rank {
+  position: relative;
+  flex-direction: column;
+  align-self: flex-end;
+  justify-self: flex-end;
+  font-size: calc(8px + 2vmin);
+  color: rgba(0, 0, 0, 0.25);
+  fill: rgba(0, 0, 0, 0.25);
+}
+
+@media (max-width: 600px) {
+  .Rank {
+    padding: 2rem;
+    position: fixed;
+  }
+}
+
+.Word {
+  flex-direction: row;
+  align-self: center;
+  font-size: clamp(4rem, 5vw + 1rem, 6rem);
+  margin: auto;
+  text-align: center;
+  user-select: none;
+  position: relative;
+}
+
+@media (max-width: 600px) {
+  .CardContainer {
+    width: 90vw;
+    width: 90svw;
+    height: 75vh;
+    height: 75svh;
+    max-height: 100svh;
+    overflow: hidden;
+  }
+
+  .Word {
+    font-size: clamp(1rem, 3vw + 1rem, 3rem);
+  }
+}
+
+.Category {
+  font-size: calc(8px + 2vmin);
+  margin-top: 10vh;
+  margin-top: 10svh;
+  user-select: none;
+  margin: 2rem;
+  position: absolute;
+}

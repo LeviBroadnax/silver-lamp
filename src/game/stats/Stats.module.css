@@ -1,0 +1,13 @@
+.Stats {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 1rem;
+  color: rgba(0, 0, 0, 0.25);
+  fill: rgba(0, 0, 0, 0.25);
+}
+@media (max-width: 600px) {
+  .Stats {
+    padding: 0;
+  }
+}
